@@ -1,0 +1,23 @@
+// Persistence Strategien haben einen Namen und eine Definition
+Strategies {
+    everyHour : "0 0 * * * ?"
+    everyDay  : "0 0 0 * * ?"
+
+    // Wenn bei einem unten definierten Item keine Strategie angebeben ist,
+    // wird die Default-Liste angewendet
+    default = everyChange
+}
+
+/*
+ * Each line in this section defines for which item(s) which strategy(ies)
+ * should be applied. You can list single items, use "*" for all items or
+ * "groupitem*" for all members of a group item (excl. the group item itself).
+ */
+Items {
+    // Speichere die Daten aller Items jeden Tag (veryDay), bei jeder Änderung (everyChange) und
+    // ordne den Items bei einem Neustartand den letzten Wert zu (restoreOnStartup)
+    * : strategy = everyChange
+
+    // Zusätzlich speichere alle Temperaturen und Wetterdaten stündlich (everyHour)
+    Temperature*, Weather* : strategy = everyChange
+}

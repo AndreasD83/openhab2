@@ -1,0 +1,16 @@
+rule "Morgens Jalousien hoch"
+when 
+    Time cron "0 00 7 * * ?" 
+then
+	sendCommand(JalousieBueroDown, OFF)
+    sendCommand(ObenUp, ON)
+	sendCommand(UntenUp, ON)
+end
+
+rule "Abends Jalousien runter"
+when 
+    Time cron "0 30 19 * * ?" 
+then
+	sendCommand(JalousieBueroUp, OFF)
+    sendCommand(JalousieBueroDown, ON)
+end

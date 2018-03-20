@@ -1,0 +1,65 @@
+rule "Büro Jalousie"
+when
+    Item JalousieBueroDown changed from OFF to ON
+then
+	//sendCommand(JalousieBueroDown, OFF)
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroDown, OFF) ]
+    //sendMail("dieckmann.andreas@gmail.com", "Jalousie Büro runter!", "Jalousie im Büro runtergefahren!")
+end
+
+rule "Unten runter"
+when
+    Item UntenDown changed from OFF to ON
+then
+	sendCommand(JalousieWohnzimmerGrossDown, ON)
+	sendCommand(JalousieWohnzimmerKleinDown, ON)
+	sendCommand(JalousieWohnzimmerTuerDown, ON)
+	sendCommand(JalousieKuecheDown, ON)
+	
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieKuecheDown, OFF) ]
+end
+
+rule "Unten hoch"
+when
+    Item UntenUp changed from OFF to ON
+then
+	sendCommand(JalousieWohnzimmerGrossUp, ON)
+	sendCommand(JalousieWohnzimmerKleinUp, ON)
+	sendCommand(JalousieWohnzimmerTuerUp, ON)
+	sendCommand(JalousieKuecheUp, ON)
+	
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieKuecheUp, OFF) ]
+end
+
+
+rule "Oben runter"
+when
+    Item ObenDown changed from OFF to ON
+then
+	sendCommand(JalousieElternDown, ON)
+	sendCommand(JalousieAnnikaDown, ON)
+	sendCommand(JalousieBueroDown, ON)
+	
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieElternDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieAnnikaDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroDown, OFF) ]
+end
+
+rule "Oben hoch"
+when
+    Item ObenUp changed from OFF to ON
+then
+	sendCommand(JalousieElternUp, ON)
+	sendCommand(JalousieAnnikaUp, ON)
+	sendCommand(JalousieBueroUp, ON)
+	
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieElternUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieAnnikaUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroUp, OFF) ]
+end

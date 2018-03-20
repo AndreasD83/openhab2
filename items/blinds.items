@@ -1,0 +1,32 @@
+
+
+Switch JalousieElternDown "JalousieElternDown" <rollershutter> {modbus="slave1:16", expire="1s,command=OFF"}
+Switch JalousieElternUp "JalousieElternUp"  <rollershutter> {modbus="slave1:17", expire="1s,command=OFF"}
+
+Switch JalousieAnnikaDown "JalousieAnnikaDown" <rollershutter> {modbus="slave1:18", expire="1s,command=OFF"}
+Switch JalousieAnnikaUp "JalousieAnnikaUp" <rollershutter> {modbus="slave1:19", expire="1s,command=OFF"}
+
+Switch JalousieWohnzimmerGrossDown "JalousieWohnzimmerGrossDown" <rollershutter> {modbus="slave1:20", expire="1s,command=OFF"} 
+Switch JalousieWohnzimmerGrossUp "JalousieWohnzimmerGrossUp" <rollershutter> {modbus="slave1:21", expire="1s,command=OFF"}
+
+Switch JalousieWohnzimmerTuerDown "JalousieWohnzimmerTuerDown" <rollershutter> {modbus="slave1:22", expire="1s,command=OFF"}
+Switch JalousieWohnzimmerTuerUp "JalousieWohnzimmerTuerUp" <rollershutter> {modbus="slave1:23", expire="1s,command=OFF"}
+
+Switch JalousieWohnzimmerKleinDown "JalousieWohnzimmerKleinDown" <rollershutter> {modbus="slave1:24", expire="1s,command=OFF"}
+Switch JalousieWohnzimmerKleinUp "JalousieWohnzimmerKleinUp" <rollershutter> {modbus="slave1:25", expire="1s,command=OFF"}
+
+Switch JalousieBueroUp "JalousieBueroUp" <rollershutter> {modbus="slave1:26", expire="1s,command=OFF"}
+Switch JalousieBueroDown "JalousieBueroDown" <rollershutter> {modbus="slave1:27", expire="1s,command=OFF"}
+
+Switch JalousieKuecheDown "JalousieKuecheDown" <rollershutter> {modbus="slave1:28", expire="1s,command=OFF"}
+Switch JalousieKuecheUp "JalousieKuecheUp" <rollershutter> {modbus="slave1:29", expire="1s,command=OFF"}
+
+Switch UntenDown "UntenDown" {expire="1s,command=OFF"}
+Switch UntenUp "UntenUp" {expire="1s,command=OFF"}
+
+Switch ObenDown "ObenDown" {expire="1s,command=OFF"}
+Switch ObenUp "ObenUp" {expire="1s,command=OFF"}
+
+DateTime CurrentDate  "Date" {ntp="Europe/Berlin:de_DE" }
+
+

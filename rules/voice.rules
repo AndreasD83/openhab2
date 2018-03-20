@@ -1,0 +1,44 @@
+rule "VoiceControl" 
+
+when 
+    Item VoiceCommand received command
+then
+  val txt = VoiceCommand.state.toString.toLowerCase
+  logInfo("Voice.Rec","VoiceCommand Gesamt received '"+txt+"'")
+  logInfo("Voice.Rec","rule start...")
+  if(txt.contains("unten runter")){
+	sendCommand(UntenDown, ON)
+  }
+  else if (txt.contains("unten hoch")) {
+    sendCommand(UntenUp, ON)
+  }
+  
+  else if (txt.contains("oben hoch")) {
+    sendCommand(ObenUp, ON)
+  }
+  else if (txt.contains("oben runter")) {
+    sendCommand(ObenDown, ON)
+  }
+  else if (txt.contains("kochen an")) {
+    sendCommand(LichtKueche, ON)
+  }
+  else if (txt.contains("kochen aus")) {
+    sendCommand(LichtKueche, OFF)
+  }
+  else if (txt.contains("office hoch")) {
+    sendCommand(JalousieBueroUp, ON)
+  }
+  else if (txt.contains("office runter")) {
+	logInfo("Voice.Rec","JalousieBueroDown ON")
+    sendCommand(JalousieBueroDown, ON)
+  }
+  else if (txt.contains("office an")) {
+	logInfo("Voice.Rec","LichtBuero ON")
+    sendCommand(LichtBuero, ON)
+  }
+  else if (txt.contains("office aus")) {
+	logInfo("Voice.Rec","LichtBuero OFF")
+    sendCommand(LichtBuero, OFF)
+  }
+  logInfo("Voice.Rec","rule end.")
+end

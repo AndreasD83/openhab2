@@ -1,0 +1,3 @@
+Group Astro <sun_clouds> (W66a)
+
+DateTime CurrentDate  "Date [%1$tA, %1$td.%1$tm.%1$tY]" {ntp="Europe/Berlin:de_DE" }

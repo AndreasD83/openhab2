@@ -1,0 +1,8 @@
+ sitemap astro label="Astro"
+{
+ Text item=Current_DateTime label="Wetter und Astrologisch [%1$tA, %1$td.%1$tm.%1$tY]" icon="sun_clouds" {
+            Frame label="Forecast" {
+                Text label="This is part of other tutorials..." icon="sun_clouds"
+            }
+        }
+}
