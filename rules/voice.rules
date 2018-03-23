@@ -25,20 +25,55 @@ then
   else if (txt.contains("kochen aus")) {
     sendCommand(LichtKueche, OFF)
   }
-  else if (txt.contains("office hoch")) {
+  
+  
+  else if (txt.contains("nele hoch")) {
     sendCommand(JalousieBueroUp, ON)
   }
-  else if (txt.contains("office runter")) {
-	logInfo("Voice.Rec","JalousieBueroDown ON")
+  else if (txt.contains("nele runter")) {
     sendCommand(JalousieBueroDown, ON)
   }
-  else if (txt.contains("office an")) {
-	logInfo("Voice.Rec","LichtBuero ON")
-    sendCommand(LichtBuero, ON)
+  else if (txt.contains("nele an")) {
+    sendCommand(TasterBuero, ON)
   }
-  else if (txt.contains("office aus")) {
-	logInfo("Voice.Rec","LichtBuero OFF")
-    sendCommand(LichtBuero, OFF)
+  else if (txt.contains("nele aus")) {
+    sendCommand(TasterBuero, OFF)
   }
+  
+  else if (txt.contains("schlafzimmer hoch")) {
+    sendCommand(JalousieElternUp, ON)
+  }
+  else if (txt.contains("schlafzimmer runter")) {
+    sendCommand(JalousieElternDown, ON)
+  }
+  else if (txt.contains("schlafzimmer an")) {
+    sendCommand(TasterSchlafzimmer, ON)
+  }
+  else if (txt.contains("schlafzimmer aus")) {
+    sendCommand(TasterSchlafzimmer, OFF)
+  }
+  
+  else if (txt.contains("annika hoch")) {
+    sendCommand(JalousieAnnikaUp, ON)
+  }
+  else if (txt.contains("annika runter")) {
+    sendCommand(JalousieAnnikaDown, ON)
+  }
+  else if (txt.contains("annika an")) {
+    sendCommand(TasterAnnika, ON)
+  }
+  else if (txt.contains("annika aus")) {
+    sendCommand(TasterAnnika, OFF)
+  }
+  
+  else if (txt.contains("wohnzimmer hoch")) {
+    sendCommand(WohnzimmerUp, ON)
+  }
+  else if (txt.contains("wohnzimmer runter")) {
+    sendCommand(WohnzimmerDown, ON)
+  }
+  
+  
+  
   logInfo("Voice.Rec","rule end.")
 end

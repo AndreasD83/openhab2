@@ -7,14 +7,18 @@ Switch LichtSchlafzimmer "LichtSchlafzimmer" (ALL) {modbus="slave1:5"}
 Switch LichtAnnika "LichtAnnika" (ALL) {modbus="slave1:6"}
 Switch LichtFlurOG "LichtFlurOG" (ALL) {modbus="slave1:7"}
 
-Switch TasterBuero "TasterBuero" (ALL) {modbus="slave1:8"}
-Switch TasterFlurEG "TasterFlurEG" (ALL) {modbus="slave1:9"}
-Switch TasterWohnzimmerSofaecke "TasterWohnzimmerSofaecke" (ALL) {modbus="slave1:10"}
-Switch TasterKueche "TasterKueche" (ALL) {modbus="slave1:11"}
-Switch TasterWohnzimmerMitte "TasterLichtWohnzimmerMitte" (ALL) {modbus="slave1:12"}
-Switch TasterSchlafzimmer "TasterSchlafzimmer" (ALL) {modbus="slave1:13"}
-Switch TasterAnnika "TasterAnnika" (ALL) {modbus="slave1:14"}
-Switch TasterFlurOG "TasterFlurOG" (ALL) {modbus="slave1:15"}
+Switch TasterBuero "TasterBuero" <office> (ALL)  {modbus="slave1:8"}
+Switch TasterFlurEG "TasterFlurEG" <wardrobe> (ALL)  {modbus="slave1:9"}
+Switch TasterWohnzimmerSofaecke "TasterWohnzimmerSofaecke" <sofa> (ALL) {modbus="slave1:10"}
+Switch TasterKueche "TasterKueche" <kitchen> (ALL)  {modbus="slave1:11"}
+Switch TasterWohnzimmerMitte "TasterLichtWohnzimmerMitte" <livingroom> (ALL)  {modbus="slave1:12"}
+Switch TasterSchlafzimmer "TasterSchlafzimmer" <parents_3_2> (ALL)  {modbus="slave1:13"}
+Switch TasterAnnika "TasterAnnika" <girl_3> (ALL)  {modbus="slave1:14"}
+Switch TasterFlurOG "TasterFlurOG" <corridor> (ALL)  {modbus="slave1:15"}
 
 Switch LichtDraussen "LichtDraussen" (ALL) {modbus="slave1:16"}
-Switch TasterLichtDraussen "TasterLichtDraussen" (ALL) {modbus="slave1:17"}
+Switch TasterLichtDraussen "TasterLichtDraussen" <terrace> (ALL)  {modbus="slave1:17"}
+
+Switch TasterOben "TasterOben" <smiley> (ALL) {expire="1s,command=OFF"}
+Switch TasterWohnzimmer "TasterWohnzimmer" <screen> (ALL) {expire="1s,command=OFF"}
+Switch TasterUnten "TasterUnten" <lawnmower> (ALL) {expire="1s,command=OFF"}

@@ -9,9 +9,17 @@ sitemap default label="Main Menu"
 					Switch item=UntenDown label="Unten Runter"
 					Switch item=ObenUp label="Oben Hoch"
 					Switch item=ObenDown label="Oben Runter"
+					Switch item=TasterOben label="Oben"
+					Switch item=TasterUnten label="aus"
 			}	
 		}
 		Text label="Wohnzimmer" icon="sofa" {
+		
+		Frame label="" {
+			Switch item=TasterWohnzimmer label="an"
+			Switch item=WohnzimmerUp label="hoch"
+			Switch item=WohnzimmerDown label="runter" 
+		}    
 		Frame label="Sofaecke" {
 			Switch item=LichtWohnzimmerSofaecke label="Licht" mappings=[ON=" "] 
 			Switch item=TasterWohnzimmerSofaecke label="Taster" 

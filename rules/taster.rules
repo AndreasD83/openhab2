@@ -1,24 +1,36 @@
-rule "Büro Jalousie"
+rule "Wohnzimmer runter"
 when
-    Item JalousieBueroDown changed from OFF to ON
+    Item WohnzimmerDown changed from OFF to ON
 then
-	//sendCommand(JalousieBueroDown, OFF)
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroDown, OFF) ]
-    //sendMail("dieckmann.andreas@gmail.com", "Jalousie Büro runter!", "Jalousie im Büro runtergefahren!")
+	sendCommand(JalousieWohnzimmerGrossDown, ON)
+	sendCommand(JalousieWohnzimmerKleinDown, ON)
+	sendCommand(JalousieWohnzimmerTuerDown, ON)
+	
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinDown, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerDown, OFF) ]
+end
+
+rule "Wohnzimmer hoch"
+when
+    Item WohnzimmerUp changed from OFF to ON
+then
+	sendCommand(JalousieWohnzimmerGrossUp, ON)
+	sendCommand(JalousieWohnzimmerKleinUp, ON)
+	sendCommand(JalousieWohnzimmerTuerUp, ON)
+	
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinUp, OFF) ]
+	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerUp, OFF) ]
 end
 
 rule "Unten runter"
 when
     Item UntenDown changed from OFF to ON
 then
-	sendCommand(JalousieWohnzimmerGrossDown, ON)
-	sendCommand(JalousieWohnzimmerKleinDown, ON)
-	sendCommand(JalousieWohnzimmerTuerDown, ON)
+	sendCommand(WohnzimmerDown, ON)
 	sendCommand(JalousieKuecheDown, ON)
 	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossDown, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinDown, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerDown, OFF) ]
 	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieKuecheDown, OFF) ]
 end
 
@@ -26,14 +38,9 @@ rule "Unten hoch"
 when
     Item UntenUp changed from OFF to ON
 then
-	sendCommand(JalousieWohnzimmerGrossUp, ON)
-	sendCommand(JalousieWohnzimmerKleinUp, ON)
-	sendCommand(JalousieWohnzimmerTuerUp, ON)
+	sendCommand(WohnzimmerUp, ON)
 	sendCommand(JalousieKuecheUp, ON)
 	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerUp, OFF) ]
 	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieKuecheUp, OFF) ]
 end
 
@@ -62,4 +69,65 @@ then
 	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieElternUp, OFF) ]
 	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieAnnikaUp, OFF) ]
 	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroUp, OFF) ]
+end
+
+rule "oben Licht"
+when 
+	Item TasterOben changed from OFF to ON
+then
+		if (TasterBuero.state == OFF) {
+			sendCommand(TasterBuero, ON)
+		} else{
+			sendCommand(TasterBuero, OFF)
+		}
+		if (TasterAnnika.state == OFF) {
+			sendCommand(TasterAnnika, ON)
+		} else{
+			sendCommand(TasterAnnika, OFF)
+		}
+		if (TasterSchlafzimmer.state == OFF) {
+			sendCommand(TasterSchlafzimmer, ON)
+		} else{
+			sendCommand(TasterSchlafzimmer, OFF)
+		}
+		if (TasterFlurOG.state == OFF) {
+			sendCommand(TasterFlurOG, ON)
+		} else{
+			sendCommand(TasterFlurOG, OFF)
+		}
+end
+
+rule "Wohnzimmer"
+when 
+	Item TasterWohnzimmer changed from OFF to ON
+then
+		if (TasterWohnzimmerSofaecke.state == OFF) {
+			sendCommand(TasterWohnzimmerSofaecke, ON)
+		} else{
+			sendCommand(TasterWohnzimmerSofaecke, OFF)
+		}
+		if (TasterWohnzimmerMitte.state == OFF) {
+			sendCommand(TasterWohnzimmerMitte, ON)
+		} else{
+			sendCommand(TasterWohnzimmerMitte, OFF)
+		}	
+end
+
+rule "unten List"
+when 
+	Item TasterUnten changed from OFF to ON
+then
+		sendCommand(TasterWohnzimmer, ON)
+		
+		if (TasterFlurEG.state == OFF) {
+			sendCommand(TasterFlurEG, ON)
+		} else{
+			sendCommand(TasterFlurEG, OFF)
+		}	
+		
+		if (TasterKueche.state == OFF) {
+			sendCommand(TasterKueche, ON)
+		} else{
+			sendCommand(TasterKueche, OFF)
+		}
 end

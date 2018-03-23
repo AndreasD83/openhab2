@@ -21,11 +21,14 @@ Switch JalousieBueroDown "JalousieBueroDown" <rollershutter> {modbus="slave1:27"
 Switch JalousieKuecheDown "JalousieKuecheDown" <rollershutter> {modbus="slave1:28", expire="1s,command=OFF"}
 Switch JalousieKuecheUp "JalousieKuecheUp" <rollershutter> {modbus="slave1:29", expire="1s,command=OFF"}
 
-Switch UntenDown "UntenDown" {expire="1s,command=OFF"}
-Switch UntenUp "UntenUp" {expire="1s,command=OFF"}
+Switch UntenDown "UntenDown" <rollershutter> {expire="1s,command=OFF"}
+Switch UntenUp "UntenUp" <rollershutter> {expire="1s,command=OFF"}
 
-Switch ObenDown "ObenDown" {expire="1s,command=OFF"}
-Switch ObenUp "ObenUp" {expire="1s,command=OFF"}
+Switch WohnzimmerDown "WohnzimmerDown" <rollershutter> {expire="1s,command=OFF"}
+Switch WohnzimmerUp "WohnzimmerUp" <rollershutter> {expire="1s,command=OFF"}
+
+Switch ObenDown "ObenDown" <rollershutter> {expire="1s,command=OFF"}
+Switch ObenUp "ObenUp" <rollershutter> {expire="1s,command=OFF"}
 
 DateTime CurrentDate  "Date" {ntp="Europe/Berlin:de_DE" }
 
