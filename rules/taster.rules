@@ -71,29 +71,71 @@ then
 	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroUp, OFF) ]
 end
 
-rule "oben Licht"
+rule "oben Licht an"
 when 
-	Item TasterOben changed from OFF to ON
+	Item TasterObenOn changed from OFF to ON
 then
-		if (TasterBuero.state == OFF) {
-			sendCommand(TasterBuero, ON)
-		} else{
-			sendCommand(TasterBuero, OFF)
+		if (LichtBuero.state == OFF) {
+			if (TasterBuero.state == OFF) {
+				sendCommand(TasterBuero, ON)
+			} else{
+				sendCommand(TasterBuero, OFF)
+			}
 		}
-		if (TasterAnnika.state == OFF) {
-			sendCommand(TasterAnnika, ON)
-		} else{
-			sendCommand(TasterAnnika, OFF)
+		if (LichtAnnika.state == OFF) {
+			if (TasterAnnika.state == OFF) {
+				sendCommand(TasterAnnika, ON)
+			} else{
+				sendCommand(TasterAnnika, OFF)
+			}
 		}
-		if (TasterSchlafzimmer.state == OFF) {
-			sendCommand(TasterSchlafzimmer, ON)
-		} else{
-			sendCommand(TasterSchlafzimmer, OFF)
+		if (LichtSchlafzimmer.state == OFF) {
+			if (TasterSchlafzimmer.state == OFF) {
+				sendCommand(TasterSchlafzimmer, ON)
+			} else{
+				sendCommand(TasterSchlafzimmer, OFF)
+			}
 		}
-		if (TasterFlurOG.state == OFF) {
-			sendCommand(TasterFlurOG, ON)
-		} else{
-			sendCommand(TasterFlurOG, OFF)
+		if (LichtFlurOG.state == OFF) {
+			if (TasterFlurOG.state == OFF) {
+				sendCommand(TasterFlurOG, ON)
+			} else{
+				sendCommand(TasterFlurOG, OFF)
+			}
+		}
+end
+
+rule "oben Licht aus"
+when 
+	Item TasterObenOff changed from OFF to ON
+then
+		if (LichtBuero.state == ON) {
+			if (TasterBuero.state == OFF) {
+				sendCommand(TasterBuero, ON)
+			} else{
+				sendCommand(TasterBuero, OFF)
+			}
+		}
+		if (LichtAnnika.state == ON) {
+			if (TasterAnnika.state == OFF) {
+				sendCommand(TasterAnnika, ON)
+			} else{
+				sendCommand(TasterAnnika, OFF)
+			}
+		}
+		if (LichtSchlafzimmer.state == ON) {
+			if (TasterSchlafzimmer.state == OFF) {
+				sendCommand(TasterSchlafzimmer, ON)
+			} else{
+				sendCommand(TasterSchlafzimmer, OFF)
+			}
+		}
+		if (LichtFlurOG.state == ON) {
+			if (TasterFlurOG.state == OFF) {
+				sendCommand(TasterFlurOG, ON)
+			} else{
+				sendCommand(TasterFlurOG, OFF)
+			}
 		}
 end
 

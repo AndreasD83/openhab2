@@ -9,8 +9,9 @@ sitemap default label="Main Menu"
 					Switch item=UntenDown label="Unten Runter"
 					Switch item=ObenUp label="Oben Hoch"
 					Switch item=ObenDown label="Oben Runter"
-					Switch item=TasterOben label="Oben"
-					Switch item=TasterUnten label="aus"
+					Switch item=TasterObenOn label="Oben an"
+					Switch item=TasterObenOff label="Oben aus"
+					Switch item=TasterUnten label="Unten"
 			}	
 		}
 		Text label="Wohnzimmer" icon="sofa" {
