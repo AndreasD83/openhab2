@@ -3,11 +3,12 @@ rule "Sonnaufgang"
 when 
     Time cron "0 0/1 * * * ?"
 then
-	logInfo("time.sunrise", " now "+now.getHourOfDay+":"+now.getMinuteOfHour+
-						   "-sunrise "+ new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay+
-						   ":"+ new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour)
+	
 	if (new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay.equals(now.getHourOfDay)
 	    && new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour.equals(now.getMinuteOfHour)){
+		logInfo("time.sunrise", " now "+now.getHourOfDay+":"+now.getMinuteOfHour+
+						   "-sunrise "+ new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay+
+						   ":"+ new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour)
 		logInfo("time.sunrise", "now: "+now+" sunrise!")
 		sendCommand(JalousieBueroDown, OFF)
 		sendCommand(ObenUp, ON)
@@ -19,12 +20,12 @@ rule "Abends Jalousien runter"
 when 
     Time cron "0 0/1 * * * ?"
 then
-	logInfo("time.sunset", " now "+now.getHourOfDay+":"+now.getMinuteOfHour+
-						   "-sunset "+ new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay+
-						   ":"+ new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour)
 	if (new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay.equals(now.getHourOfDay)
 	    && new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour.equals(now.getMinuteOfHour)){
 		logInfo("time.sunset", "now: "+now+" sunset!")
+		logInfo("time.sunset", " now "+now.getHourOfDay+":"+now.getMinuteOfHour+
+						   "-sunset "+ new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay+
+						   ":"+ new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour)
 		sendCommand(JalousieBueroUp, OFF)
 		sendCommand(JalousieBueroDown, ON)
 	}
