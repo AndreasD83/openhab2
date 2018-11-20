@@ -1,4 +1,4 @@
-sitemap default label="Main Menu"
+sitemap default label="Haus"
 {
 	
     Frame label="Nordhornstrasse 52" {
@@ -62,14 +62,14 @@ sitemap default label="Main Menu"
 		   }
 		}
 		Text label="1. Obergeschoss" icon="firstfloor" {
-		   Frame label="Buero" {
+		   Frame label="Annikas Zimmer" {
 			Switch item=LichtBuero label="Licht" mappings=[ON=" "] 
 			Switch item=TasterBuero label="Taster" 
 			Switch item=JalousieBueroUp label="Hoch" 
 			Switch item=JalousieBueroDown label="Runter" 
                    }
            
-          Frame label="Annikas Zimmer" {
+          Frame label="Neles Zimmer" {
 			Switch item=LichtAnnika label="Licht" mappings=[ON=" "] 
             Switch item=TasterAnnika label="Taster" 
             //Switch item=JalousieAnnika label="Jalousie"
@@ -79,6 +79,13 @@ sitemap default label="Main Menu"
                    Frame label="Flur Obergeschoss" {
 			Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
                         Switch item=TasterFlurOG label="Taster" 
+		   }
+		}
+		Text label="Dachboden" icon="attic" {
+			Frame label="Dachboden" {
+			Switch item=LichtDachbodenVorne label="Licht Büro" mappings=[ON=" "] 
+            Switch item=LichtDachbodenHinten label="Licht Gäste" mappings=[ON=" "]
+			Switch item=TasterLichtDachboden label="Taster" 
 		   }
 		}
 	}

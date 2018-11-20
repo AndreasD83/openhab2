@@ -19,6 +19,11 @@ Switch TasterFlurOG "TasterFlurOG" <corridor> (ALL)  {modbus="slave1:15"}
 Switch LichtDraussen "LichtDraussen" (ALL) {modbus="slave1:16"}
 Switch TasterLichtDraussen "TasterLichtDraussen" <terrace> (ALL)  {modbus="slave1:17"}
 
+Switch TasterLichtDachboden "TasterLichtDachboden" <terrace> (ALL)  {modbus="slave1:30"}
+Switch LichtDachbodenHinten "LichtDachbodenHinten" (ALL) {modbus="slave1:31"}
+Switch LichtDachbodenVorne "LichtDachbodenVorne" (ALL) {modbus="slave1:32"}
+
+
 Switch TasterObenOn "TasterObenOn" <party> (ALL) {expire="10s,command=OFF"}
 Switch TasterObenOff "TasterObenOff" <presence> (ALL) {expire="10s,command=OFF"}
 Switch TasterWohnzimmer "TasterWohnzimmer" <screen> (ALL) {expire="1s,command=OFF"}

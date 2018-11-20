@@ -61,76 +61,21 @@ then
 		sendCommand(JalousieKuecheDown, ON)
 end
 
-rule "Abends Licht Buero an"
+rule "Abends Licht an"
 when 
-    Time cron "0 57 20 * * ?"
+    Time cron "0 45 20 * * ?"
 then
 		logInfo("evening", "now: "+now+" light!")	
-		if(LichtBuero.state == OFF){
-			logInfo("evening", "LichtBuero OFF...")
-			if(TasterBuero.state == ON){
-				logInfo("evening", "ON -> OFF...")	
-				sendCommand(TasterBuero, OFF)
-			} else{
-				logInfo("evening", "OFF -> ON...")
-				sendCommand(TasterBuero, ON)
-			}
-		}
-		
-		
+		sendCommand(LichtKueche, ON)
+		sendCommand(LichtBuero, ON)
 end
 
-rule "Abends Licht Buero aus"
+rule "Abends Licht aus"
 when 
-    Time cron "0 21 32 * * ?"
+    Time cron "0 00 22 * * ?"
 then
 		logInfo("evening", "now: "+now+" light OFF!")	
-		if(LichtBuero.state == ON){
-			logInfo("evening", "LichtBuero ON...")
-			if(TasterBuero.state == ON){
-				logInfo("evening", "ON -> OFF...")	
-				sendCommand(TasterBuero, OFF)
-			} else{
-				logInfo("evening", "OFF -> ON...")
-				sendCommand(TasterBuero, ON)
-			}
-		}
-		
-end
-
-rule "Abends Licht Kueche an"
-when 
-    Time cron "0 55 20 * * ?"
-then
-		logInfo("evening", "now: "+now+" light!")	
-		if(LichtKueche.state == OFF){
-			logInfo("evening", "LichtKueche OFF...")
-			if(TasterKueche.state == ON){
-				logInfo("evening", "ON -> OFF...")	
-				sendCommand(TasterKueche, OFF)
-			} else{
-				logInfo("evening", "OFF -> ON...")
-				sendCommand(TasterKueche, ON)
-			}
-		}
-		
-		
-end
-
-rule "Abends Licht Kueche aus"
-when 
-    Time cron "0 21 29 * * ?"
-then
-		logInfo("evening", "now: "+now+" light OFF!")	
-		if(LichtKueche.state == ON){
-			logInfo("evening", "LichtKueche ON...")
-			if(TasterKueche.state == ON){
-				logInfo("evening", "ON -> OFF...")	
-				sendCommand(TasterKueche, OFF)
-			} else{
-				logInfo("evening", "OFF -> ON...")
-				sendCommand(TasterKueche, ON)
-			}
-		}
+		sendCommand(LichtKueche, OFF)
+		sendCommand(LichtBuero, OFF)
 		
 end
