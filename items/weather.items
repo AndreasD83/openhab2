@@ -1,0 +1,3 @@
+﻿Number:Temperature Temperature 	"Outside Temperature [%.1f %unit%]" { channel="yahooweather:weather:berlin:temperature" }
+#Number   Temperature   "Temperature [%.2f °C]"   {weather="locationId=home, type=temperature, property=current"}
+Number   Humidity      "Humidity [%d %%]"        {weather="locationId=home, type=atmosphere, property=humidity"}

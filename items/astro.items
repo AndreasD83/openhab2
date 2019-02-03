@@ -1,6 +1,6 @@
 Group Astro <sun_clouds> (W66a)
 
-DateTime CurrentDate  "Date [%1$tA, %1$td.%1$tm.%1$tY]" {ntp="Europe/Berlin:de_DE" }
+DateTime CurrentDate  "Date [%1$tA, %1$td.%1$tm.%1$tY]" { channel="ntp:ntp:demo:dateTime" }
 
 DateTime SunsetTime "Sunset [%1$tH:%1$tM]" <sun> (Astro) { channel="astro:sun:home:set#start" }
 DateTime SunriseTime "Sunrise [%1$tH:%1$tM]" <sun> (Astro) { channel="astro:sun:home:rise#end" }

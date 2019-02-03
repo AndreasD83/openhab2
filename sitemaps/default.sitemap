@@ -1,8 +1,7 @@
 sitemap default label="Haus"
 {
 	
-    Frame label="Nordhornstrasse 52" {
-		Text item=CurrentDate
+    Frame label="Automation" {
 		Text label="Gesamt" icon="house" {
 			Frame label="Jalousien" {
 					Switch item=UntenUp label="Unten Hoch"
