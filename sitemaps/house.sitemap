@@ -60,8 +60,9 @@ sitemap default label="Main Menu"
 					}
 			Text label="Dachboden" icon="attic" {
 				   Frame label="Licht" {
-					Switch item=LichtBuero label="Licht" mappings=[ON=" "] 
-					Switch item=TasterBuero label="Taster" 
+					Switch item=LichtDachbodenVorne label="Licht" mappings=[ON=" "] 
+					Switch item=LichtDachbodenHinten label="Licht" mappings=[ON=" "] 
+					Switch item=TasterLichtDachboden label="Taster" 
 					}
 			}
 		}
