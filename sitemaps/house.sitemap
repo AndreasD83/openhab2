@@ -3,54 +3,33 @@ sitemap default label="Main Menu"
 	
     Frame label="Nordhornstrasse 52" {
 		Text item=CurrentDate
-		Text label="Gesamt" icon="house" {
-			Frame label="Jalousien" {
-					Switch item=UntenUp label="Unten Hoch"
-					Switch item=UntenDown label="Unten Runter"
-					Switch item=ObenUp label="Oben Hoch"
-					Switch item=ObenDown label="Oben Runter"
-					Switch item=TasterObenOn label="Oben an"
-					Switch item=TasterObenOff label="Oben aus"
-					Switch item=TasterUnten label="Unten"
-			}	
-		}
 		Text label="Wohnzimmer" icon="sofa" {
-		
-		Frame label="" {
-			Switch item=TasterWohnzimmer label="an"
-			Switch item=WohnzimmerUp label="hoch"
-			Switch item=WohnzimmerDown label="runter" 
-		}    
-		Frame label="Sofaecke" {
-			Switch item=LichtWohnzimmerSofaecke label="Licht" mappings=[ON=" "] 
-			Switch item=TasterWohnzimmerSofaecke label="Taster" 
-			Switch item=JalousieWohnzimmerKleinUp label="kleines Fenster Hoch"
-			Switch item=JalousieWohnzimmerKleinDown label="kleines Fenster Runter"
-		}    
-		Frame label="Essbereich" {
-			Switch item=LichtWohnzimmerMitte label="Licht" mappings=[ON=" "] 
-            Switch item=TasterWohnzimmerMitte label="Taster"
-			Switch item=JalousieWohnzimmerGrossUp label="großes Fenster Hoch"
-			Switch item=JalousieWohnzimmerGrossDown label="großes Fenster Runter"
-			Switch item=JalousieWohnzimmerTuerUp label="Tür Hoch"
-			Switch item=JalousieWohnzimmerTuerDown label="Tür Runter"	
-                   }
-		}		
+			Frame label="Sofaecke" {
+				Switch item=LichtWohnzimmerSofaecke label="Licht" mappings=[ON=" "] 
+				Switch item=TasterWohnzimmerSofaecke label="Taster" 
+				Switch item=JalousieWohnzimmerKleinUp label="kleines Fenster Hoch"
+				Switch item=JalousieWohnzimmerKleinDown label="kleines Fenster Runter"
+			}    
+			Frame label="Essbereich" {
+				Switch item=LichtWohnzimmerMitte label="Licht" mappings=[ON=" "] 
+				Switch item=TasterWohnzimmerMitte label="Taster"
+				Switch item=JalousieWohnzimmerGrossUp label="großes Fenster Hoch"
+				Switch item=JalousieWohnzimmerGrossDown label="großes Fenster Runter"
+				Switch item=JalousieWohnzimmerTuerUp label="Tür Hoch"
+				Switch item=JalousieWohnzimmerTuerDown label="Tür Runter"	
+					   }
+	   }		
        Text label="Erdgeschoss" icon="groundfloor" {
 		  Frame label="Flur Erdgeschoss" {
 			Switch item=LichtFlurEG label="Licht" mappings=[ON=" "] 
 			Switch item=TasterFlurEG label="Taster" 
-                   }
-                   
+          }   
          Frame label="Kueche" {
 			Switch item=LichtKueche label="Licht" mappings=[ON=" "] 
 			Switch item=TasterKueche  label="Taster" 
 			Switch item=JalousieKuecheUp label="Hoch"
 			Switch item=JalousieKuecheDown label="Runter"
-                   }	
-		Frame label="Terasse" {
-	
-		}
+         }	
 		Text label="Schlafzimmer" icon="parents" {
 			Frame label="Schlafzimmer" {
 			Switch item=LichtSchlafzimmer label="Licht" mappings=[ON=" "] 
@@ -74,10 +53,10 @@ sitemap default label="Main Menu"
 			Switch item=JalousieAnnikaUp label="Hoch"
 			Switch item=JalousieAnnikaDown label="Runter"
 		   }
-                   Frame label="Flur Obergeschoss" {
+          Frame label="Flur Obergeschoss" {
 			Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
-                        Switch item=TasterFlurOG label="Taster" 
-		   }
+            Switch item=TasterFlurOG label="Taster" 
+		    }
 		}
 		Text label="Dachboden" icon="attic" {
 		   Frame label="Licht" {
