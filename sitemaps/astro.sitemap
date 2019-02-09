@@ -1,8 +1,0 @@
-sitemap label="Astro"
-{
-	Frame label="Sonne und Mond" {
-	   Text item=Sunrise_Time
-	   Text item=Sunset_Time
-	   Text item=Moon_Phase
-	}
-}
