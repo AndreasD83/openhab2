@@ -58,13 +58,13 @@ sitemap default label="Main Menu"
 					Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
 					Switch item=TasterFlurOG label="Taster" 
 					}
-			Text label="Dachboden" icon="attic" {
+		}
+		Text label="Dachboden" icon="attic" {
 				   Frame label="Licht" {
 					Switch item=LichtDachbodenVorne label="Licht" mappings=[ON=" "] 
 					Switch item=LichtDachbodenHinten label="Licht" mappings=[ON=" "] 
 					Switch item=TasterLichtDachboden label="Taster" 
 					}
-			}
 		}
 	}
 }
