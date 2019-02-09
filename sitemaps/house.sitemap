@@ -49,7 +49,7 @@ sitemap default label="Main Menu"
 			Switch item=JalousieKuecheDown label="Runter"
                    }	
 		Frame label="Terasse" {
-                   }	
+	
 		}
 		Text label="Schlafzimmer" icon="parents" {
 			Frame label="Schlafzimmer" {
