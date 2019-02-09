@@ -49,8 +49,6 @@ sitemap default label="Main Menu"
 			Switch item=JalousieKuecheDown label="Runter"
                    }	
 		Frame label="Terasse" {
-			Switch item=LichtDraussen label="Licht" mappings=[ON=" "] 
-			Switch item=TasterLichtDraussen  label="Taster" 
                    }	
 		}
 		Text label="Schlafzimmer" icon="parents" {

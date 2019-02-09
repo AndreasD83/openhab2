@@ -16,8 +16,6 @@ Switch TasterSchlafzimmer "TasterSchlafzimmer" <parents_3_2> (ALL)  { channel="m
 Switch TasterAnnika "TasterAnnika" <girl_3> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterAnnika:switch"}
 Switch TasterFlurOG "TasterFlurOG" <corridor> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterFlurOG:switch"}
 
-Switch LichtDraussen "LichtDraussen" (ALL) { channel="modbus:data:wago:wago_slave1:LichtDraussen:switch"}
-Switch TasterLichtDraussen "TasterLichtDraussen" <terrace> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterLichtDraussen:switch"}
 
 Switch TasterLichtDachboden "TasterLichtDachboden" (ALL) { channel="modbus:data:wago:wago_slave1:TasterLichtDachboden:switch"}
 Switch LichtDachbodenVorne "LichtDachbodenVorne" (ALL) { channel="modbus:data:wago:wago_slave1:LichtDachbodenVorne:switch"}
