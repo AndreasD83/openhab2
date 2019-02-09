@@ -1,4 +1,4 @@
-sitemap default label="Astro"
+sitemap label="Astro"
 {
 	Frame label="Sonne und Mond" {
 	   Text item=Sunrise_Time
