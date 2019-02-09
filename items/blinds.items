@@ -1,25 +1,25 @@
 
 
-Switch JalousieElternDown "JalousieElternDown" <rollershutter> {modbus="slave1:16", expire="1s,command=OFF"}
-Switch JalousieElternUp "JalousieElternUp"  <rollershutter> {modbus="slave1:17", expire="1s,command=OFF"}
+Switch JalousieElternDown "JalousieElternDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieElternDown:switch"}
+Switch JalousieElternUp "JalousieElternUp"  <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieElternUp:switch"}
 
-Switch JalousieAnnikaDown "JalousieAnnikaDown" <rollershutter> {modbus="slave1:18", expire="1s,command=OFF"}
-Switch JalousieAnnikaUp "JalousieAnnikaUp" <rollershutter> {modbus="slave1:19", expire="1s,command=OFF"}
+Switch JalousieAnnikaDown "JalousieAnnikaDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieAnnikaDown:switch"}
+Switch JalousieAnnikaUp "JalousieAnnikaUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieAnnikaUp:switch"}
 
-Switch JalousieWohnzimmerGrossDown "JalousieWohnzimmerGrossDown" <rollershutter> {modbus="slave1:20", expire="1s,command=OFF"} 
-Switch JalousieWohnzimmerGrossUp "JalousieWohnzimmerGrossUp" <rollershutter> {modbus="slave1:21", expire="1s,command=OFF"}
+Switch JalousieWohnzimmerGrossDown "JalousieWohnzimmerGrossDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieWohnzimmerGrossDown:switch"}
+Switch JalousieWohnzimmerGrossUp "JalousieWohnzimmerGrossUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieWohnzimmerGrossUp:switch"}
 
-Switch JalousieWohnzimmerTuerDown "JalousieWohnzimmerTuerDown" <rollershutter> {modbus="slave1:22", expire="1s,command=OFF"}
-Switch JalousieWohnzimmerTuerUp "JalousieWohnzimmerTuerUp" <rollershutter> {modbus="slave1:23", expire="1s,command=OFF"}
+Switch JalousieWohnzimmerTuerDown "JalousieWohnzimmerTuerDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieWohnzimmerTuerDown:switch"}
+Switch JalousieWohnzimmerTuerUp "JalousieWohnzimmerTuerUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieWohnzimmerTuerUp:switch"}
 
-Switch JalousieWohnzimmerKleinDown "JalousieWohnzimmerKleinDown" <rollershutter> {modbus="slave1:24", expire="1s,command=OFF"}
-Switch JalousieWohnzimmerKleinUp "JalousieWohnzimmerKleinUp" <rollershutter> {modbus="slave1:25", expire="1s,command=OFF"}
+Switch JalousieWohnzimmerKleinDown "JalousieWohnzimmerKleinDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieWohnzimmerKleinDown:switch"}
+Switch JalousieWohnzimmerKleinUp "JalousieWohnzimmerKleinUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieWohnzimmerKleinUp:switch"}
 
-Switch JalousieBueroUp "JalousieBueroUp" <rollershutter> {modbus="slave1:26", expire="1s,command=OFF"}
-Switch JalousieBueroDown "JalousieBueroDown" <rollershutter> {modbus="slave1:27", expire="1s,command=OFF"}
+Switch JalousieBueroUp "JalousieBueroUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieBueroUp:switch"}
+Switch JalousieBueroDown "JalousieBueroDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieBueroDown:switch"}
 
-Switch JalousieKuecheDown "JalousieKuecheDown" <rollershutter> {modbus="slave1:28", expire="1s,command=OFF"}
-Switch JalousieKuecheUp "JalousieKuecheUp" <rollershutter> {modbus="slave1:29", expire="1s,command=OFF"}
+Switch JalousieKuecheDown "JalousieKuecheDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieKuecheDown:switch"}
+Switch JalousieKuecheUp "JalousieKuecheUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieKuecheUp:switch"}
 
 Switch UntenDown "UntenDown" <rollershutter> {expire="1s,command=OFF"}
 Switch UntenUp "UntenUp" <rollershutter> {expire="1s,command=OFF"}

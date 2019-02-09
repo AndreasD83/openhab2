@@ -1,23 +1,27 @@
-Switch LichtFlurEG "LichtFlurEG" (ALL) {modbus="slave1:0"}
-Switch LichtWohnzimmerSofaecke "LichtWonhzimmerSofaecke" (ALL) {modbus="slave1:1"}
-Switch LichtKueche "LichtKueche" (ALL) {modbus="slave1:2"}
-Switch LichtWohnzimmerMitte "LichtWohnzimmerMitte" (ALL) {modbus="slave1:3"}
-Switch LichtBuero "LichtBuero" (ALL) {modbus="slave1:4"}
-Switch LichtSchlafzimmer "LichtSchlafzimmer" (ALL) {modbus="slave1:5"}
-Switch LichtAnnika "LichtAnnika" (ALL) {modbus="slave1:6"}
-Switch LichtFlurOG "LichtFlurOG" (ALL) {modbus="slave1:7"}
+Switch LichtFlurEG "LichtFlurEG" (ALL) { channel="modbus:data:wago:wago_slave1:LichtFlurEG:switch"}
+Switch LichtWohnzimmerSofaecke "LichtWonhzimmerSofaecke" (ALL) { channel="modbus:data:wago:wago_slave1:LichtWohnzimmerSofaecke:switch"}
+Switch LichtKueche "LichtKueche" (ALL) { channel="modbus:data:wago:wago_slave1:LichtKueche:switch"}
+Switch LichtWohnzimmerMitte "LichtWohnzimmerMitte" (ALL) { channel="modbus:data:wago:wago_slave1:LichtWohnzimmerMitte:switch"}
+Switch LichtBuero "LichtBuero" (ALL) { channel="modbus:data:wago:wago_slave1:LichtBuero:switch"}
+Switch LichtSchlafzimmer "LichtSchlafzimmer" (ALL) { channel="modbus:data:wago:wago_slave1:LichtSchlafzimmer:switch"}
+Switch LichtAnnika "LichtAnnika" (ALL) { channel="modbus:data:wago:wago_slave1:LichtAnnika:switch"}
+Switch LichtFlurOG "LichtFlurOG" (ALL) { channel="modbus:data:wago:wago_slave1:LichtFlurOG:switch"}
 
-Switch TasterBuero "TasterBuero" <office> (ALL)  {modbus="slave1:8"}
-Switch TasterFlurEG "TasterFlurEG" <wardrobe> (ALL)  {modbus="slave1:9"}
-Switch TasterWohnzimmerSofaecke "TasterWohnzimmerSofaecke" <sofa> (ALL) {modbus="slave1:10"}
-Switch TasterKueche "TasterKueche" <kitchen> (ALL)  {modbus="slave1:11"}
-Switch TasterWohnzimmerMitte "TasterLichtWohnzimmerMitte" <livingroom> (ALL)  {modbus="slave1:12"}
-Switch TasterSchlafzimmer "TasterSchlafzimmer" <parents_3_2> (ALL)  {modbus="slave1:13"}
-Switch TasterAnnika "TasterAnnika" <girl_3> (ALL)  {modbus="slave1:14"}
-Switch TasterFlurOG "TasterFlurOG" <corridor> (ALL)  {modbus="slave1:15"}
+Switch TasterBuero "TasterBuero" <office> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterBuero:switch"}
+Switch TasterFlurEG "TasterFlurEG" <wardrobe> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterFlurEG:switch"}
+Switch TasterWohnzimmerSofaecke "TasterWohnzimmerSofaecke" <sofa> (ALL) { channel="modbus:data:wago:wago_slave1:TasterWohnzimmerSofaecke:switch"}
+Switch TasterKueche "TasterKueche" <kitchen> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterKueche:switch"}
+Switch TasterWohnzimmerMitte "TasterLichtWohnzimmerMitte" <livingroom> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterWohnzimmerMitte:switch"}
+Switch TasterSchlafzimmer "TasterSchlafzimmer" <parents_3_2> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterSchlafzimmer:switch"}
+Switch TasterAnnika "TasterAnnika" <girl_3> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterAnnika:switch"}
+Switch TasterFlurOG "TasterFlurOG" <corridor> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterFlurOG:switch"}
 
-Switch LichtDraussen "LichtDraussen" (ALL) {modbus="slave1:16"}
-Switch TasterLichtDraussen "TasterLichtDraussen" <terrace> (ALL)  {modbus="slave1:17"}
+Switch LichtDraussen "LichtDraussen" (ALL) { channel="modbus:data:wago:wago_slave1:LichtDraussen:switch"}
+Switch TasterLichtDraussen "TasterLichtDraussen" <terrace> (ALL)  { channel="modbus:data:wago:wago_slave1:TasterLichtDraussen:switch"}
+
+Switch TasterLichtDachboden "TasterLichtDachboden" (ALL) { channel="modbus:data:wago:wago_slave1:TasterLichtDachboden:switch"}
+Switch LichtDachbodenVorne "LichtDachbodenVorne" (ALL) { channel="modbus:data:wago:wago_slave1:LichtDachbodenVorne:switch"}
+Switch LichtDachbodenHinten "LichtDachbodenHinten" (ALL)  { channel="modbus:data:wago:wago_slave1:LichtDachbodenHinten:switch"}
 
 Switch TasterObenOn "TasterObenOn" <party> (ALL) {expire="10s,command=OFF"}
 Switch TasterObenOff "TasterObenOff" <presence> (ALL) {expire="10s,command=OFF"}
