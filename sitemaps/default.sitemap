@@ -40,14 +40,14 @@ sitemap default label="Main Menu"
 					Switch item=JalousieElternDown label="Runter"
 				   }
 				}
-				   Frame label="Buero" {
+				   Frame label="Annikas Zimmer" {
 					Switch item=LichtBuero label="Licht" mappings=[ON=" "] 
 					Switch item=TasterBuero label="Taster" 
 					Switch item=JalousieBueroUp label="Hoch" 
 					Switch item=JalousieBueroDown label="Runter" 
 						   }
 				   
-				  Frame label="Annikas Zimmer" {
+				  Frame label="Neles Zimmer" {
 					Switch item=LichtAnnika label="Licht" mappings=[ON=" "] 
 					Switch item=TasterAnnika label="Taster" 
 					//Switch item=JalousieAnnika label="Jalousie"
