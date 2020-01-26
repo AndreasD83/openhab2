@@ -10,14 +10,18 @@ sitemap default label="Main Menu"
 					Switch item=JalousieWohnzimmerKleinUp label="kleines Fenster Hoch"
 					Switch item=JalousieWohnzimmerKleinDown label="kleines Fenster Runter"
 				}    
-				Frame label="Essbereich" {
+				Frame label="Essbereich" icon="garagedoor" {
 					Switch item=LichtWohnzimmerMitte label="Licht" mappings=[ON=" "] 
 					Switch item=TasterWohnzimmerMitte label="Taster"
 					Switch item=JalousieWohnzimmerGrossUp label="großes Fenster Hoch"
 					Switch item=JalousieWohnzimmerGrossDown label="großes Fenster Runter"
 					Switch item=JalousieWohnzimmerTuerUp label="Tür Hoch"
-					Switch item=JalousieWohnzimmerTuerDown label="Tür Runter"	
-						   }
+					Switch item=JalousieWohnzimmerTuerDown label="Tür Runter"
+					Switch item=LichtSteckdose1 label="Licht Regal" mappings=[ON=" "] 
+					Switch item=TasterSteckdose1 label="Taster Regal"
+					Switch item=LichtSteckdose2 label="Licht Kugel" mappings=[ON=" "] 
+					Switch item=TasterSteckdose2 label="Taster Kugel"
+				}
 		   }		
 		   Text label="Erdgeschoss" icon="groundfloor" {
 			  Frame label="Flur Erdgeschoss" {
@@ -31,7 +35,11 @@ sitemap default label="Main Menu"
 				Switch item=JalousieKuecheDown label="Runter"
 			 }
 			}			 
-			Text label="1.Obergeschoss" icon="firstfloor" { 
+			Text label="1.Obergeschoss" icon="firstfloor" {
+				Frame label="Flur Obergeschoss" {
+					Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
+					Switch item=TasterFlurOG label="Taster" 
+					}			
 				Text label="Schlafzimmer" icon="parents" {
 					Frame label="Schlafzimmer" {
 					Switch item=LichtSchlafzimmer label="Licht" mappings=[ON=" "] 
@@ -54,10 +62,7 @@ sitemap default label="Main Menu"
 					Switch item=JalousieAnnikaUp label="Hoch"
 					Switch item=JalousieAnnikaDown label="Runter"
 				   }
-				  Frame label="Flur Obergeschoss" {
-					Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
-					Switch item=TasterFlurOG label="Taster" 
-					}
+				  
 		}
 		Text label="Dachboden" icon="attic" {
 				   Frame label="Licht" {
@@ -66,6 +71,13 @@ sitemap default label="Main Menu"
 					Switch item=TasterLichtDachboden label="Taster" 
 					}
 		}
+		Text label="Terasse" icon="terrace" {
+				 Frame label="Licht" {
+					Switch item=LichtDraussen1 label="Licht" mappings=[ON=" "] 
+					Switch item=LichtDraussen2  label="Licht" mappings=[ON=" "] 
+					Switch item=TasterDraussen  label="Taster" 
+				 }
+			 }
 		Frame label="Sonne und Mond" {
 		   Text item=Sunrise_Time
 		   Text item=Sunset_Time

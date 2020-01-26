@@ -21,6 +21,15 @@ Switch TasterLichtDachboden "TasterLichtDachboden" (ALL) { channel="modbus:data:
 Switch LichtDachbodenVorne "LichtDachbodenVorne" (ALL) { channel="modbus:data:wago:wago_slave1:LichtDachbodenVorne:switch"}
 Switch LichtDachbodenHinten "LichtDachbodenHinten" (ALL)  { channel="modbus:data:wago:wago_slave1:LichtDachbodenHinten:switch"}
 
+Switch TasterDraussen "TasterDraussen" (ALL) { channel="modbus:data:wago:wago_slave1:TasterDraussen:switch"}
+Switch LichtDraussen1 "LichtDraussen1" (ALL) { channel="modbus:data:wago:wago_slave1:LichtDraussen1:switch"}
+Switch LichtDraussen2 "LichtDraussen2" (ALL)  { channel="modbus:data:wago:wago_slave1:LichtDraussen2:switch"}
+
+Switch TasterSteckdose1 "TasterSteckdose1" (ALL) { channel="modbus:data:wago:wago_slave1:TasterSteckdose1:switch"}
+Switch TasterSteckdose2 "TasterSteckdose2" (ALL) { channel="modbus:data:wago:wago_slave1:TasterSteckdose2:switch"}
+Switch LichtSteckdose1 "TasterSteckdose1" (ALL) { channel="modbus:data:wago:wago_slave1:LichtSteckdose1:switch"}
+Switch LichtSteckdose2 "TasterSteckdose2" (ALL) { channel="modbus:data:wago:wago_slave1:LichtSteckdose2:switch"}
+
 Switch TasterObenOn "TasterObenOn" <party> (ALL) {expire="10s,command=OFF"}
 Switch TasterObenOff "TasterObenOff" <presence> (ALL) {expire="10s,command=OFF"}
 Switch TasterWohnzimmer "TasterWohnzimmer" <screen> (ALL) {expire="1s,command=OFF"}

@@ -80,6 +80,23 @@ Bridge modbus:tcp:wago [ host="192.168.2.14", port=502, id=1 ] {
 		Thing data LichtDachbodenVorne [ readStart="12319", readValueType="bit", writeStart="12319", writeValueType="bit", writeType="coil" ]
 		//2.0
 		Thing data LichtDachbodenHinten [ readStart="12320", readValueType="bit", writeStart="12320", writeValueType="bit", writeType="coil" ]
+		
+		//2.1
+		Thing data TasterSteckdose1 [ readStart="12321", readValueType="bit", writeStart="12321", writeValueType="bit", writeType="coil" ]
+		//2.2
+		Thing data TasterSteckdose2 [ readStart="12322", readValueType="bit", writeStart="12322", writeValueType="bit", writeType="coil" ]
+		
+		//2.3
+		Thing data LichtSteckdose1 [ readStart="12323", readValueType="bit", writeStart="12323", writeValueType="bit", writeType="coil" ]
+		//2.4
+		Thing data LichtSteckdose2 [ readStart="12324", readValueType="bit", writeStart="12324", writeValueType="bit", writeType="coil" ]
+		
+		//2.5
+		Thing data TasterDraussen [ readStart="12325", readValueType="bit", writeStart="12325", writeValueType="bit", writeType="coil" ]
+		//2.6
+		Thing data LichtDraussen1 [ readStart="12326", readValueType="bit", writeStart="12326", writeValueType="bit", writeType="coil" ]
+		//2.7
+		Thing data LichtDraussen2 [ readStart="12327", readValueType="bit", writeStart="12327", writeValueType="bit", writeType="coil" ]
 
     }
 }
