@@ -71,7 +71,7 @@ sitemap default label="Main Menu"
 					Switch item=TasterLichtDachboden label="Taster" 
 					}
 		}
-		Text label="Terasse" icon="terrace" {
+		Text label="Terrasse" icon="terrace" {
 				 Frame label="Licht" {
 					Switch item=LichtDraussen1 label="Licht" mappings=[ON=" "] 
 					Switch item=LichtDraussen2  label="Licht" mappings=[ON=" "] 
