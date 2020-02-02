@@ -1,2 +1,3 @@
 ﻿astro:sun:home [ geolocation="51.9606649,7.626134699999966,17", interval=300]
 astro:moon:home [ geolocation="51.9606649,7.626134699999966,17", interval=300]
+ntp:ntp:ourhome  [ hostname="ptbtime1.ptb.de", refreshInterval=60, refreshNtp=30 ]

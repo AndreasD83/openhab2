@@ -76,18 +76,10 @@ when
 	Item TasterObenOn changed from OFF to ON
 then
 		if (LichtBuero.state == OFF) {
-			if (TasterBuero.state == OFF) {
-				sendCommand(TasterBuero, ON)
-			} else{
-				sendCommand(TasterBuero, OFF)
-			}
+			sendCommand(LichtBuero, ON)
 		}
-		if (LichtAnnika.state == OFF) {
-			if (TasterAnnika.state == OFF) {
-				sendCommand(TasterAnnika, ON)
-			} else{
-				sendCommand(TasterAnnika, OFF)
-			}
+		if (LichtAnnika.state == OFF) {{
+			sendCommand(LichtAnnika, ON)
 		}
 		if (LichtSchlafzimmer.state == OFF) {
 			if (TasterSchlafzimmer.state == OFF) {

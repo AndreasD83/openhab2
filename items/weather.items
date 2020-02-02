@@ -1,0 +1,44 @@
+// atmosphere
+Number   Humidity    	  "Humidity [%d %%]"  	  {weather="locationId=home-OWM, type=atmosphere, property=humidity"}
+Number   Visibility    	  "Visibility [%.2f km]"  {weather="locationId=home-OWM, type=atmosphere, property=visibility"}
+Number   Visibility_Mph   "Visibility [%.2f mi]"  {weather="locationId=home-OWM, type=atmosphere, property=visibility, unit=mph"}
+Number   Pressure    	  "Pressure [%.2f mb]"    {weather="locationId=home-OWM, type=atmosphere, property=pressure"}
+Number   Pressure_Inches  "Pressure [%.2f in]"    {weather="locationId=home-OWM, type=atmosphere, property=pressure, unit=inches"}
+String   Pressure_Trend   "Pressuretrend [%s]"    {weather="locationId=home-OWM, type=atmosphere, property=pressureTrend"}
+Number   Ozone            "Ozone [%d ppm]"    	  {weather="locationId=home-OWM, type=atmosphere, property=ozone"}
+Number   UV_Index         "UV Index"              {weather="locationId=home-OWM, type=atmosphere, property=uvIndex, scale=0"}
+
+// clouds
+Number   Clouds   "Clouds [%.0f %%]"   {weather="locationId=home-OWM, type=clouds, property=percent"}
+
+// condition
+String   Condition        "Condition [%s]"      {weather="locationId=home-OWM, type=condition, property=text"}
+String   Condition_ID     "Condition id [%s]"   {weather="locationId=home-OWM, type=condition, property=id"}
+DateTime ObservationTime  "Observation time [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"   {weather="locationId=home-OWM, type=condition, property=observationTime"}
+DateTime LastUpdate       "Last update [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"        {weather="locationId=home-OWM, type=condition, property=lastUpdate"}
+String   CommonId         "Common id [%s]"      {weather="locationId=home-OWM, type=condition, property=commonId"}
+
+// precipitation
+Number   Rain          "Rain [%.2f mm/h]"   {weather="locationId=home-OWM, type=precipitation, property=rain"}
+Number   Snow          "Snow [%.2f mm/h]"   {weather="locationId=home-OWM, type=precipitation, property=snow"}
+Number   Precip_Probability   "Precip probability [%d %%]"   {weather="locationId=home-OWM, type=precipitation, property=probability"}
+
+// temperature
+Number   Temperature      "Temperature [%.2f °C]"       {weather="locationId=home-OWM, type=temperature, property=current"}
+Number   Temp_Feel        "Temperature feel [%.2f °C]"  {weather="locationId=home-OWM, type=temperature, property=feel"}
+Number   Temp_Dewpoint    "Dewpoint [%.2f °C]"          {weather="locationId=home-OWM, type=temperature, property=dewpoint"}
+// min and max values only available in forecasts
+Number   Temp_Min         "Temperature min [%.2f °C]"   {weather="locationId=home-OWM, type=temperature, property=min"}
+Number   Temp_Max         "Temperature max [%.2f °C]"   {weather="locationId=home-OWM, type=temperature, property=max"}
+String   Temp_MinMax      "Min/Max [%s °C]"             {weather="locationId=home-OWM, type=temperature, property=minMax"}
+
+// wind
+Number   Wind_Speed           "Windspeed [%.2f km/h]"    {weather="locationId=home-OWM, type=wind, property=speed"}
+Number   Wind_Speed_Beaufort  "Windspeed Beaufort [%d]"  {weather="locationId=home-OWM, type=wind, property=speed, unit=beaufort"}
+Number   Wind_Speed_Knots     "Windspeed [%.2f kn]"      {weather="locationId=home-OWM, type=wind, property=speed, unit=knots"}
+String	 Wind_Direction       "Wind direction [%s]"      {weather="locationId=home-OWM, type=wind, property=direction"}
+Number   Wind_Degree          "Wind degree [%.0f °]"     {weather="locationId=home-OWM, type=wind, property=degree"}
+Number   Wind_Gust            "Wind gust [%.2f km/h]"    {weather="locationId=home-OWM, type=wind, property=gust"}
+Number   Wind_Gust_Beaufort   "Wind gust Beaufort [%d]"  {weather="locationId=home-OWM, type=wind, property=gust, unit=beaufort"}
+Number   Wind_Gust_Knots      "Wind gust [%.2f kn]"      {weather="locationId=home-OWM, type=wind, property=gust, unit=knots"}
+Number   Wind_Chill           "Wind chill [%.2f °C]"     {weather="locationId=home-OWM, type=wind, property=chill"}

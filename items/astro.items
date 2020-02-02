@@ -1,3 +1,4 @@
-DateTime Sunrise_Time  "Sonnenaufgang[%1$tH:%1$tM]"     { channel="astro:sun:home:rise#start" }
-DateTime Sunset_Time   "Sonnenuntergang [%1$tH:%1$tM]"  { channel="astro:sun:home:set#start" }
-String   MoonPhase     "Mondphase "                     { channel="astro:moon:home:phase#name" }
+DateTime SunriseDate  "Date [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="astro:sun:home:rise#start" }
+DateTime SunriseTime  "Time [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="astro:sun:home:rise#start" }
+DateTime Date  "Date [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="ntp:ntp:local:dateTime" }
+DateTime Time  "Time [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="ntp:ntp:local:dateTime" }

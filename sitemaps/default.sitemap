@@ -2,7 +2,6 @@ sitemap default label="Main Menu"
 {
 	
 	Frame label="Nordhornstrasse 52" {
-			Text item=CurrentDate
 			Text label="Wohnzimmer" icon="sofa" {
 				Frame label="Sofaecke" {
 					Switch item=LichtWohnzimmerSofaecke label="Licht" mappings=[ON=" "] 
@@ -18,9 +17,9 @@ sitemap default label="Main Menu"
 					Switch item=JalousieWohnzimmerTuerUp label="Tür Hoch"
 					Switch item=JalousieWohnzimmerTuerDown label="Tür Runter"
 					Switch item=LichtSteckdose1 label="Licht Regal" mappings=[ON=" "] 
-					Switch item=TasterSteckdose1 label="Taster Regal"
+					Switch item=TasterSteckdose1 label="Taster Regal" icon="lawnmower"
 					Switch item=LichtSteckdose2 label="Licht Kugel" mappings=[ON=" "] 
-					Switch item=TasterSteckdose2 label="Taster Kugel"
+					Switch item=TasterSteckdose2 label="Taster Kugel" icon="lightbulb"
 				}
 		   }		
 		   Text label="Erdgeschoss" icon="groundfloor" {
@@ -36,33 +35,30 @@ sitemap default label="Main Menu"
 			 }
 			}			 
 			Text label="1.Obergeschoss" icon="firstfloor" {
+				Switch item=TasterObenOn label="An" 
 				Frame label="Flur Obergeschoss" {
 					Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
 					Switch item=TasterFlurOG label="Taster" 
-					}			
-				Text label="Schlafzimmer" icon="parents" {
-					Frame label="Schlafzimmer" {
+				}			
+				Frame label="Schlafzimmer" {
 					Switch item=LichtSchlafzimmer label="Licht" mappings=[ON=" "] 
 					Switch item=TasterSchlafzimmer label="Taster" 
 					Switch item=JalousieElternUp label="Hoch"
 					Switch item=JalousieElternDown label="Runter"
-				   }
 				}
-				   Frame label="Annikas Zimmer" {
+				Frame label="Annikas Zimmer" {
 					Switch item=LichtBuero label="Licht" mappings=[ON=" "] 
-					Switch item=TasterBuero label="Taster" 
+					Switch item=TasterBuero label="Taster" icon="girl_3"
 					Switch item=JalousieBueroUp label="Hoch" 
 					Switch item=JalousieBueroDown label="Runter" 
-						   }
-				   
-				  Frame label="Neles Zimmer" {
+				} 
+				Frame label="Neles Zimmer" {
 					Switch item=LichtAnnika label="Licht" mappings=[ON=" "] 
-					Switch item=TasterAnnika label="Taster" 
+					Switch item=TasterAnnika label="Taster" icon="girl_2"
 					//Switch item=JalousieAnnika label="Jalousie"
 					Switch item=JalousieAnnikaUp label="Hoch"
 					Switch item=JalousieAnnikaDown label="Runter"
-				   }
-				  
+				}
 		}
 		Text label="Dachboden" icon="attic" {
 				   Frame label="Licht" {
@@ -78,10 +74,25 @@ sitemap default label="Main Menu"
 					Switch item=TasterDraussen  label="Taster" 
 				 }
 			 }
-		Frame label="Sonne und Mond" {
-		   Text item=Sunrise_Time
-		   Text item=Sunset_Time
-		   Text item=Moon_Phase
-	}
+		Frame label="Wetter" {
+			Text item=Temperature label="aktuelle Temparatur [%.2f °C]" icon="temperature"
+			Text item=Humidity label="Feuchtigkeit [%d %%]" icon="humidity"
+			Text item=Temp_Feel label="gefühlte Temparatur [%.2f °C]" icon="temperature"
+			Text item=Rain label="Regen [%.2f mm/h]" icon="rain"
+			Text item=Precip_Probability label="Niederschlagswahrscheinlichkeit [%d %%]" icon="sun_clouds"
+			Text item=Wind_Speed label="Wind [%.2f km/h]" icon="wind"
+			Text item=Wind_Speed_Beaufort label="Wind Beaufort [%d]" icon="wind"
+			Text item=Temp_Min label="min. Temparatur [%.2f °C]" icon="temperature"
+			Text item=Temp_Max label="max. Temparatur [%.2f °C]" icon="temperature"
+			Text item=UV_Index label="UV Index [%d]" icon="sun"
+			}
+		Frame label="Uhrzeit" {
+			Text item=Date icon="calendar" label="Datum"
+			Text item=Time  icon="time" label="Zeit"
+			}
+		Frame label="Sonnenaufgang" {
+			Text item=SunriseDate icon="calendar" label="Datum"
+			Text item=SunriseTime  icon="time" label="Zeit"
+}
 	}
 }
