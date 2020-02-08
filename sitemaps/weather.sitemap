@@ -1,0 +1,43 @@
+sitemap default label="Wetter"
+{		
+		Frame label="DWD Warnungen Münster"{
+			Text item=WarningMuensterTitel visibility=[WarningMuenster==ON]
+			Text item=WarningMuensterBeschreibung visibility=[WarningMuenster==ON]
+		}
+		Frame label="Nordhornstrasse" {
+			Text item=Temperature label="aktuelle Temparatur [%.2f °C]" icon="temperature"
+			Text item=Humidity label="Feuchtigkeit [%d %%]" icon="humidity"
+			Text item=Temp_Feel label="gefühlte Temparatur [%.2f °C]" icon="temperature"
+			Text item=Condition  label="[%s]" icon="sun_clouds"
+			Text item=Wind_Direction  label="Windrichtung: [%s]" icon="movecontrol"
+			Text item=Wind_Speed label="Wind [%.2f km/h]" icon="wind"
+			Text item=Wind_Speed_Beaufort label="Wind Beaufort [%d]" icon="wind"
+			Text item=UV_Index label="UV Index [%d]" icon="sun"
+			}
+		Frame label="Winkhaus Telgte" {
+			Text item=WH_Temperature label="aktuelle Temparatur [%.2f °C]" icon="temperature"
+			Text item=WH_Humidity label="Feuchtigkeit [%d %%]" icon="humidity"
+			Text item=WH_Temp_Feel label="gefühlte Temparatur [%.2f °C]" icon="temperature"
+			Text item=WH_Condition  label="[%s]" icon="sun_clouds"
+			Text item=WH_Wind_Direction  label="Windrichtung: [%s]" icon="movecontrol"
+			Text item=WH_Wind_Speed label="Wind [%.2f km/h]" icon="wind"
+			Text item=WH_Wind_Speed_Beaufort label="Wind Beaufort [%d]" icon="wind"
+			Text item=WH_UV_Index label="UV Index [%d]" icon="sun"
+		}
+		Frame label="morgen" {
+			Text item=Tomorrow_Temp_Min label="min. Temparatur [%.2f °C]" icon="temperature"
+			Text item=Tomorrow_Temp_Max label="max. Temparatur [%.2f °C]" icon="temperature"
+			Text item=Tomorrow_Condition  label="[%s]" icon="sun_clouds"
+			Text item=Tomorrow_Wind_Direction  label="Windrichtung: [%s]" icon="movecontrol"
+			Text item=Tomorrow_Wind_Speed label="Wind [%.2f km/h]" icon="wind"
+			Text item=Tomorrow_Wind_Speed_Beaufort label="Wind Beaufort [%d]" icon="wind"
+		}
+		Frame label="übermorgen" {
+			Text item=Dayaftertomorrow_Temp_Min label="min. Temparatur [%.2f °C]" icon="temperature"
+			Text item=Dayaftertomorrow_Temp_Max label="max. Temparatur [%.2f °C]" icon="temperature"
+			Text item=Dayaftertomorrow_Condition  label="[%s]" icon="sun_clouds"
+			Text item=Dayaftertomorrow_Wind_Direction  label="Windrichtung: [%s]" icon="movecontrol"
+			Text item=Dayaftertomorrow_Wind_Speed label="Wind [%.2f km/h]" icon="wind"
+			Text item=Dayaftertomorrow_Wind_Speed_Beaufort label="Wind Beaufort [%d]" icon="wind"
+		}
+}

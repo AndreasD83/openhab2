@@ -1,0 +1,10 @@
+Group   gLivingRoomTV    "Living room TV" <screen>
+Dimmer  TV_Volume        "Volume"         <soundvolume>        (gLivingRoomTV)   { channel="samsungtv:tv:tv:volume" }
+Switch  TV_Mute          "Mute"           <soundvolume_mute>   (gLivingRoomTV)   { channel="samsungtv:tv:tv:mute" }
+String  TV_SourceName    "Source Name"                         (gLivingRoomTV)   { channel="samsungtv:tv:tv:sourceName" }
+String  TV_SourceApp     "Source App"                          (gLivingRoomTV)   { channel="samsungtv:tv:tv:sourceApp" }
+String  TV_ProgramTitle  "Program Title"                       (gLivingRoomTV)   { channel="samsungtv:tv:tv:programTitle" }
+String  TV_ChannelName   "Channel Name"                        (gLivingRoomTV)   { channel="samsungtv:tv:tv:channelName" }
+String  TV_KeyCode       "Key Code"                            (gLivingRoomTV)   { channel="samsungtv:tv:tv:keyCode" }
+Switch  TV_Power         "Power"                               (gLivingRoomTV)   { channel="samsungtv:tv:tv:power" }
+Switch  TV_ArtMode       "Art Mode"                            (gLivingRoomTV)   { channel="samsungtv:tv:tv:artMode" }

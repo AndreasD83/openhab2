@@ -1,7 +1,18 @@
-sitemap default label="Main Menu"
+sitemap default label="Steuerung"
 {
-	
-	Frame label="Nordhornstrasse 52" {
+	Frame label="Steuerung" {		
+		   Text label="Erdgeschoss" icon="groundfloor" {
+			  Frame label="Flur Erdgeschoss" {
+				Switch item=LichtFlurEG label="Licht" mappings=[ON=" "] 
+				Switch item=TasterFlurEG label="Taster" 
+			  }   
+			  Frame label="Kueche" {
+				Switch item=LichtKueche label="Licht" mappings=[ON=" "] 
+				Switch item=TasterKueche  label="Taster" 
+				Switch item=JalousieKuecheUp label="Hoch"
+				Switch item=JalousieKuecheDown label="Runter"
+			  }
+			}
 			Text label="Wohnzimmer" icon="sofa" {
 				Frame label="Sofaecke" {
 					Switch item=LichtWohnzimmerSofaecke label="Licht" mappings=[ON=" "] 
@@ -9,9 +20,9 @@ sitemap default label="Main Menu"
 					Switch item=JalousieWohnzimmerKleinUp label="kleines Fenster Hoch"
 					Switch item=JalousieWohnzimmerKleinDown label="kleines Fenster Runter"
 				}    
-				Frame label="Essbereich" icon="garagedoor" {
+				Frame label="Essbereich" icon="party" {
 					Switch item=LichtWohnzimmerMitte label="Licht" mappings=[ON=" "] 
-					Switch item=TasterWohnzimmerMitte label="Taster"
+					Switch item=TasterWohnzimmerMitte label="Taster" icon="garagedoor"
 					Switch item=JalousieWohnzimmerGrossUp label="großes Fenster Hoch"
 					Switch item=JalousieWohnzimmerGrossDown label="großes Fenster Runter"
 					Switch item=JalousieWohnzimmerTuerUp label="Tür Hoch"
@@ -21,19 +32,7 @@ sitemap default label="Main Menu"
 					Switch item=LichtSteckdose2 label="Licht Kugel" mappings=[ON=" "] 
 					Switch item=TasterSteckdose2 label="Taster Kugel" icon="lightbulb"
 				}
-		   }		
-		   Text label="Erdgeschoss" icon="groundfloor" {
-			  Frame label="Flur Erdgeschoss" {
-				Switch item=LichtFlurEG label="Licht" mappings=[ON=" "] 
-				Switch item=TasterFlurEG label="Taster" 
-			  }   
-			 Frame label="Kueche" {
-				Switch item=LichtKueche label="Licht" mappings=[ON=" "] 
-				Switch item=TasterKueche  label="Taster" 
-				Switch item=JalousieKuecheUp label="Hoch"
-				Switch item=JalousieKuecheDown label="Runter"
-			 }
-			}			 
+			}
 			Text label="1.Obergeschoss" icon="firstfloor" {
 				Switch item=TasterObenOn label="An" 
 				Frame label="Flur Obergeschoss" {
@@ -74,25 +73,5 @@ sitemap default label="Main Menu"
 					Switch item=TasterDraussen  label="Taster" 
 				 }
 			 }
-		Frame label="Wetter" {
-			Text item=Temperature label="aktuelle Temparatur [%.2f °C]" icon="temperature"
-			Text item=Humidity label="Feuchtigkeit [%d %%]" icon="humidity"
-			Text item=Temp_Feel label="gefühlte Temparatur [%.2f °C]" icon="temperature"
-			Text item=Rain label="Regen [%.2f mm/h]" icon="rain"
-			Text item=Precip_Probability label="Niederschlagswahrscheinlichkeit [%d %%]" icon="sun_clouds"
-			Text item=Wind_Speed label="Wind [%.2f km/h]" icon="wind"
-			Text item=Wind_Speed_Beaufort label="Wind Beaufort [%d]" icon="wind"
-			Text item=Temp_Min label="min. Temparatur [%.2f °C]" icon="temperature"
-			Text item=Temp_Max label="max. Temparatur [%.2f °C]" icon="temperature"
-			Text item=UV_Index label="UV Index [%d]" icon="sun"
-			}
-		Frame label="Uhrzeit" {
-			Text item=Date icon="calendar" label="Datum"
-			Text item=Time  icon="time" label="Zeit"
-			}
-		Frame label="Sonnenaufgang" {
-			Text item=SunriseDate icon="calendar" label="Datum"
-			Text item=SunriseTime  icon="time" label="Zeit"
-}
 	}
 }

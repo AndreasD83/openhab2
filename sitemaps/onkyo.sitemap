@@ -1,0 +1,34 @@
+sitemap default label="Onkyo Verstärker"
+{
+    Frame label="Zone1" {
+        Switch    item=uZ1_Power
+        Switch    item=amplifierLrZ1_Mute
+        Selection item=amplifierLrZ1_Input  mappings=[ 0='DVR/VCR', 1='SATELLITE/CABLE', 2='GAME', 3='AUX', 4='GAME', 5='PC', 16='BLURAY/DVD', 32='TAPE1', 33='TAPE2', 34='PHONO', 35='CD', 36='FM', 37='AM', 38='TUNER', 39='MUSICSERVER', 40='INTERNETRADIO', 41='USB', 42='USB_BACK', 43='NETWORK', 45='AIRPLAY', 48='MULTICH', 50='SIRIUS' ]
+        Slider    item=amplifierLrZ1_Volume
+    }
+
+
+    Frame label="Player" {
+        Default   item=amplifierLrPlayer_Control
+        Text      item=amplifierLrPlayer_Title
+        Text      item=amplifierLrPlayer_Album
+        Text      item=amplifierLrPlayer_Artist
+        Text      item=amplifierLrPlayer_CurrentPlayingTime
+        Selection item=amplifierLrPlayer_Listenmode mappings=[0=Stereo, 1=Direct, 2=Surround, 15=Mono, 31="Whole House", 66="THX Cinema"]
+    }
+    Frame label="NetMenu" {
+        Text      item=amplifierLrNet_Title
+        Selection item=amplifierLrNet_Control   mappings=[ Up='Up', Down='Down', Select='Select', Back='Back', PageUp='PageUp', PageDown='PageDow', Select0='Select0', Select1='Select1', Select2='Select2', Select3='Select3', Select4='Select4', Select5='Select5', Select6='Select6', Select7='Select7', Select8='Select8', Select9='Select9' ]
+        Selection item=amplifierLrNet_Selection mappings=[ 0='Item0', 1='Item1', 2='Item2', 3='Item3', 4='Item4', 5='Item5', 6='Item6', 7='Item7', 8='Item8', 9='Item9' ]
+        Text      item=amplifierLrNet_Item0
+        Text      item=amplifierLrNet_Item1
+        Text      item=amplifierLrNet_Item2
+        Text      item=amplifierLrNet_Item3
+        Text      item=amplifierLrNet_Item4
+        Text      item=amplifierLrNet_Item5
+        Text      item=amplifierLrNet_Item6
+        Text      item=amplifierLrNet_Item7
+        Text      item=amplifierLrNet_Item8
+        Text      item=amplifierLrNet_Item9
+    }
+}
