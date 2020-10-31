@@ -78,7 +78,7 @@ then
 		if (LichtBuero.state == OFF) {
 			sendCommand(LichtBuero, ON)
 		}
-		if (LichtAnnika.state == OFF) {{
+		if (LichtAnnika.state == OFF) {
 			sendCommand(LichtAnnika, ON)
 		}
 		if (LichtSchlafzimmer.state == OFF) {
@@ -165,3 +165,4 @@ then
 			sendCommand(TasterKueche, OFF)
 		}
 end
+

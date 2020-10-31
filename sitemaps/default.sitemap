@@ -55,8 +55,12 @@ sitemap default label="Steuerung"
 					Switch item=LichtAnnika label="Licht" mappings=[ON=" "] 
 					Switch item=TasterAnnika label="Taster" icon="girl_2"
 					//Switch item=JalousieAnnika label="Jalousie"
+					//Switch item=JalousieAnnikaUp label="Hoch" mappings=[ON="Hoch"] icon="soundvolume" visibility=[JalousieAnnikaUp!=ON]
+					//Switch item=JalousieAnnikaUp label="Hoch" mappings=[OFF="Runter"] icon="soundvolume" visibility=[JalousieAnnikaUp==ON]
 					Switch item=JalousieAnnikaUp label="Hoch"
 					Switch item=JalousieAnnikaDown label="Runter"
+					//Switch item=JalousieAnnikaDown label="Runter" mappings=[ON="Runter"] icon="soundvolume" visibility=[JalousieAnnikaDown!=ON]
+					//Switch item=JalousieAnnikaDown label="Hoch" mappings=[OFF="Hoch"] icon="soundvolume" visibility=[JalousieAnnikaDown==ON]
 				}
 		}
 		Text label="Dachboden" icon="attic" {
