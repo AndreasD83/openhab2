@@ -5,10 +5,6 @@ then
 	sendCommand(JalousieWohnzimmerGrossDown, ON)
 	sendCommand(JalousieWohnzimmerKleinDown, ON)
 	sendCommand(JalousieWohnzimmerTuerDown, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossDown, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinDown, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerDown, OFF) ]
 end
 
 rule "Wohnzimmer hoch"
@@ -30,8 +26,6 @@ when
 then
 	sendCommand(WohnzimmerDown, ON)
 	sendCommand(JalousieKuecheDown, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieKuecheDown, OFF) ]
 end
 
 rule "Unten hoch"
@@ -40,8 +34,6 @@ when
 then
 	sendCommand(WohnzimmerUp, ON)
 	sendCommand(JalousieKuecheUp, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieKuecheUp, OFF) ]
 end
 
 
@@ -52,10 +44,6 @@ then
 	sendCommand(JalousieElternDown, ON)
 	sendCommand(JalousieAnnikaDown, ON)
 	sendCommand(JalousieBueroDown, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieElternDown, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieAnnikaDown, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroDown, OFF) ]
 end
 
 rule "Oben hoch"
@@ -65,10 +53,6 @@ then
 	sendCommand(JalousieElternUp, ON)
 	sendCommand(JalousieAnnikaUp, ON)
 	sendCommand(JalousieBueroUp, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieElternUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieAnnikaUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieBueroUp, OFF) ]
 end
 
 rule "oben Licht an"

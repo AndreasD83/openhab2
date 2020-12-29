@@ -14,6 +14,7 @@ sitemap default label="Steuerung"
 			  }
 			}
 			Text label="Wohnzimmer" icon="sofa" {
+				Switch item=LichtWohnzimmerMitte label="Licht" mappings=[ON=" "] 
 				Frame label="Sofaecke" {
 					Switch item=LichtWohnzimmerSofaecke label="Licht" mappings=[ON=" "] 
 					Switch item=TasterWohnzimmerSofaecke label="Taster" 
@@ -34,8 +35,8 @@ sitemap default label="Steuerung"
 				}
 			}
 			Text label="1.Obergeschoss" icon="firstfloor" {
-				Switch item=TasterObenOn label="An" 
 				Frame label="Flur Obergeschoss" {
+					Switch item=TasterObenOn label="An" 
 					Switch item=LichtFlurOG label="Licht" mappings=[ON=" "] 
 					Switch item=TasterFlurOG label="Taster" 
 				}			

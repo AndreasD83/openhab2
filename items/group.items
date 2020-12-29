@@ -1,0 +1,16 @@
+
+Switch UntenDown "UntenDown" <rollershutter> {expire="1s,command=OFF"}
+Switch UntenUp "UntenUp" <rollershutter> {expire="1s,command=OFF"}
+
+Switch WohnzimmerDown "WohnzimmerDown" <rollershutter> {expire="1s,command=OFF"}
+Switch WohnzimmerUp "WohnzimmerUp" <rollershutter> {expire="1s,command=OFF"}
+
+Switch ObenDown "ObenDown" <rollershutter> {expire="1s,command=OFF"}
+Switch ObenUp "ObenUp" <rollershutter> {expire="1s,command=OFF"}
+
+DateTime CurrentDate  "Date" {ntp="Europe/Berlin:de_DE" }
+
+Switch TasterObenOn "TasterObenOn" <party> (ALL) {expire="10s,command=OFF"}
+Switch TasterObenOff "TasterObenOff" <presence> (ALL) {expire="10s,command=OFF"}
+Switch TasterWohnzimmer "TasterWohnzimmer" <screen> (ALL) {expire="1s,command=OFF"}
+Switch TasterUnten "TasterUnten" <lawnmower> (ALL) {expire="1s,command=OFF"}

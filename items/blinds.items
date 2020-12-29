@@ -20,16 +20,3 @@ Switch JalousieBueroDown "JalousieBueroDown" <rollershutter> { channel="modbus:d
 
 Switch JalousieKuecheDown "JalousieKuecheDown" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieKuecheDown:switch"}
 Switch JalousieKuecheUp "JalousieKuecheUp" <rollershutter> { channel="modbus:data:wago:wago_slave1:JalousieKuecheUp:switch"}
-
-Switch UntenDown "UntenDown" <rollershutter> {expire="1s,command=OFF"}
-Switch UntenUp "UntenUp" <rollershutter> {expire="1s,command=OFF"}
-
-Switch WohnzimmerDown "WohnzimmerDown" <rollershutter> {expire="1s,command=OFF"}
-Switch WohnzimmerUp "WohnzimmerUp" <rollershutter> {expire="1s,command=OFF"}
-
-Switch ObenDown "ObenDown" <rollershutter> {expire="1s,command=OFF"}
-Switch ObenUp "ObenUp" <rollershutter> {expire="1s,command=OFF"}
-
-DateTime CurrentDate  "Date" {ntp="Europe/Berlin:de_DE" }
-
-

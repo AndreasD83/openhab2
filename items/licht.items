@@ -29,8 +29,3 @@ Switch TasterSteckdose1 "TasterSteckdose1" (ALL) { channel="modbus:data:wago:wag
 Switch TasterSteckdose2 "TasterSteckdose2" (ALL) { channel="modbus:data:wago:wago_slave1:TasterSteckdose2:switch"}
 Switch LichtSteckdose1 "TasterSteckdose1" (ALL) { channel="modbus:data:wago:wago_slave1:LichtSteckdose1:switch"}
 Switch LichtSteckdose2 "TasterSteckdose2" (ALL) { channel="modbus:data:wago:wago_slave1:LichtSteckdose2:switch"}
-
-Switch TasterObenOn "TasterObenOn" <party> (ALL) {expire="10s,command=OFF"}
-Switch TasterObenOff "TasterObenOff" <presence> (ALL) {expire="10s,command=OFF"}
-Switch TasterWohnzimmer "TasterWohnzimmer" <screen> (ALL) {expire="1s,command=OFF"}
-Switch TasterUnten "TasterUnten" <lawnmower> (ALL) {expire="1s,command=OFF"}
