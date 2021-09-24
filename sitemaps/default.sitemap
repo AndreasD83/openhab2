@@ -5,6 +5,8 @@ sitemap default label="Steuerung"
 			  Frame label="Flur Erdgeschoss" {
 				Switch item=LichtFlurEG label="Licht" mappings=[ON=" "] 
 				Switch item=TasterFlurEG label="Taster" 
+				Switch item=UntenUp label="Unten Hoch"
+				Switch item=UntenDown label="Unten Runter"
 			  }   
 			  Frame label="Kueche" {
 				Switch item=LichtKueche label="Licht" mappings=[ON=" "] 
