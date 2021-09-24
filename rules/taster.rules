@@ -11,13 +11,10 @@ rule "Wohnzimmer hoch"
 when
     Item WohnzimmerUp changed from OFF to ON
 then
+	logInfo("","WohnzimmerUp an...")
 	sendCommand(JalousieWohnzimmerGrossUp, ON)
 	sendCommand(JalousieWohnzimmerKleinUp, ON)
 	sendCommand(JalousieWohnzimmerTuerUp, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerUp, OFF) ]
 end
 
 rule "Unten runter"
@@ -53,6 +50,22 @@ then
 	sendCommand(JalousieElternUp, ON)
 	sendCommand(JalousieAnnikaUp, ON)
 	sendCommand(JalousieBueroUp, ON)
+end
+
+rule "Alles hoch"
+when
+    Item AllUp changed from OFF to ON
+then
+	sendCommand(ObenUp, ON)
+	sendCommand(UntenUp, ON)
+end
+
+rule "Alles runter"
+when
+    Item AllDown changed from OFF to ON
+then
+	sendCommand(ObenDown, ON)
+	sendCommand(UntenDown, ON)
 end
 
 rule "oben Licht an"
@@ -149,4 +162,3 @@ then
 			sendCommand(TasterKueche, OFF)
 		}
 end
-
