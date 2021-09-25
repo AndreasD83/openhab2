@@ -1,43 +1,38 @@
 
-rule "Sonnaufgang"
-when 
-    Time cron "0 0/1 * * * ?"
+
+rule "log"
+
+when
+     Time cron "0 0/1 * * * ?"
+
 then
-	logInfo("time.sunrise", " now "+now.getHourOfDay+":"+now.getMinuteOfHour+
-						   "-sunrise "+ new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay+
-						   ":"+ new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour)
-	if (new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay.equals(now.getHourOfDay)
-	    && new DateTime((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour.equals(now.getMinuteOfHour)){
-		logInfo("time.sunrise", "now: "+now+" sunrise!")
-		sendCommand(JalousieBueroDown, OFF)
-		sendCommand(ObenUp, ON)
-		sendCommand(UntenUp, ON)
-	}
+    //LogError("log", "-sunrise ")
+	logInfo("time.sunrise", " sunrise: "+Sunrise_Time.state.toString)
+	logInfo("time.sunrise", " now: "+now)
+	val sunActions = getActions("astro","astro:sun:house")
+    if(null === sunActions) {
+            logInfo("actions", "sunActions not found, check thing ID")
+            return
+    } else {
+            // do something with sunActions
+    }
 end
 
-rule "Abends Jalousien runter"
-when 
-    Time cron "0 0/1 * * * ?"
+rule "Sunrise Rule"
+
+when
+    Channel 'astro:sun:home:civilDawn#event' triggered START
+
 then
-	logInfo("time.sunset", " now "+now.getHourOfDay+":"+now.getMinuteOfHour+
-						   "-sunset "+ new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay+
-						   ":"+ new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour)
-	if (new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getHourOfDay.equals(now.getHourOfDay)
-	    && new DateTime((astro_sun_local_set_start.state as DateTimeType).calendar.timeInMillis).getMinuteOfHour.equals(now.getMinuteOfHour)){
-		logInfo("time.sunset", "now: "+now+" sunset!")
-		sendCommand(JalousieBueroUp, OFF)
-		sendCommand(JalousieBueroDown, ON)
-	}
+    logInfo("time.sunrise", " now "+now+":"+"-sunrise ")
 end
 
-//rule "times every 10 seconds"
-//  when 
-//    Time cron "*/10 * * * * ?"
-//  then
-//	logInfo("time", "now: "+now)
-//	logInfo("time", "astro_sun_local_rise_start: "+astro_sun_local_rise_start.state+"; später als Sonnenaufgang: "+now.isAfter((astro_sun_local_rise_start.state as DateTimeType).calendar.timeInMillis))
-//	logInfo("time", "astro_sun_local_set_start: "+astro_sun_local_set_start.state+"; später als Sonnenuntergang: "+now.isAfter((astro_sun_local_set_end.state as DateTimeType).calendar.timeInMillis))
-//	logInfo("time", "astro_sun_local_set_end: "+astro_sun_local_set_end.state)
-//	logInfo("time", "astro_sun_local_set_end.state.equals(now): "+astro_sun_local_set_end.state.equals(now))
-//	logInfo("time", "astro_sun_local_set_start.state.equals(now): "+astro_sun_local_set_start.state.equals(now))
-//end
+rule "Sunset Rule"
+
+when
+    Channel 'astro:sun:home:civilDuskt#event' triggered START
+
+then
+    logInfo("time.sunset", " now "+now+":"+
+						   "-sunset ")
+end
