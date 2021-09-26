@@ -24,7 +24,8 @@ when
     Channel 'astro:sun:home:civilDawn#event' triggered START
 
 then
-    logInfo("time.sunrise", " now "+now+":"+"-sunrise ")
+    logInfo("time.sunrise", " now "+now)
+    sendCommand(UntenUp, ON)
 end
 
 rule "Sunset Rule"
