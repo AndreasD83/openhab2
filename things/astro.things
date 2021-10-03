@@ -1,2 +1,10 @@
-astro:sun:house [ geolocation="51.9694133,7.5744154", interval=300]
+astro:sun:house [ geolocation="51.9694133,7.5744154", interval=300]{
+Channels:
+        Type rangeEvent : rise#event [
+            offset=-60
+        ]
+        Type rangeEvent : set#event [
+            offset=120
+        ]
+}
 astro:moon:house [ geolocation="51.9694133,7.5744154", interval=300]

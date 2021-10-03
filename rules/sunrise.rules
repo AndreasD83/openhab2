@@ -1,39 +1,21 @@
 
-
-rule "log"
-
-when
-     Time cron "0 0/1 * * * ?"
-
-then
-    //LogError("log", "-sunrise ")
-	logInfo("time.sunrise", " sunrise: "+Sunrise_Time.state.toString)
-	logInfo("time.sunrise", " now: "+now)
-	val sunActions = getActions("astro","astro:sun:house")
-    if(null === sunActions) {
-            logInfo("actions", "sunActions not found, check thing ID")
-            return
-    } else {
-            // do something with sunActions
-    }
-end
-
 rule "Sunrise Rule"
 
 when
-    Channel 'astro:sun:home:civilDawn#event' triggered START
+    Channel 'astro:sun:house:rise#event' triggered START
 
 then
     logInfo("time.sunrise", " now "+now)
-    sendCommand(UntenUp, ON)
+    //sendCommand(UntenUp, ON)
 end
 
 rule "Sunset Rule"
 
 when
-    Channel 'astro:sun:home:civilDuskt#event' triggered START
+    Channel 'astro:sun:house:set#event' triggered START
 
 then
     logInfo("time.sunset", " now "+now+":"+
 						   "-sunset ")
+    //sendCommand(UntenDown, ON)
 end
