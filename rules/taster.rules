@@ -38,7 +38,7 @@ rule "Oben runter"
 when
     Item ObenDown changed from OFF to ON
 then
-	sendCommand(JalousieElternDown, ON)
+	//sendCommand(JalousieElternDown, ON)
 	sendCommand(JalousieAnnikaDown, ON)
 	sendCommand(JalousieBueroDown, ON)
 end
@@ -47,7 +47,7 @@ rule "Oben hoch"
 when
     Item ObenUp changed from OFF to ON
 then
-	sendCommand(JalousieElternUp, ON)
+	//sendCommand(JalousieElternUp, ON)
 	sendCommand(JalousieAnnikaUp, ON)
 	sendCommand(JalousieBueroUp, ON)
 end

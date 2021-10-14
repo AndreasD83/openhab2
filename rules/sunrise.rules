@@ -6,7 +6,8 @@ when
 
 then
     logInfo("time.sunrise", " now "+now)
-    //sendCommand(UntenUp, ON)
+    sendCommand(UntenUp, ON)
+    sendCommand(ObenUp, ON)
 end
 
 rule "Sunset Rule"
@@ -17,5 +18,6 @@ when
 then
     logInfo("time.sunset", " now "+now+":"+
 						   "-sunset ")
-    //sendCommand(UntenDown, ON)
+    sendCommand(UntenDown, ON)
+    sendCommand(ObenDown, ON)
 end
