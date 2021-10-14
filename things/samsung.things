@@ -1,1 +1,1 @@
-Thing samsungtv:tv:tv [ hostName="192.168.2.102", port=55000, refreshInterval=1000 ]
+Thing samsungtv:tv:11de3f02_c44e_43e7_805c_ead56ce04a4b [ hostName="192.168.2.102", port=55000, refreshInterval=1000 ]
