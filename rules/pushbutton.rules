@@ -1,0 +1,127 @@
+
+var time = 1
+rule "Pushbutton_JalousieElternUp"
+when
+	Item JalousieElternUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieElternUp.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieElternDown"
+when
+	Item JalousieElternDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieElternDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieAnnikaUp"
+when
+	Item JalousieAnnikaUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieAnnikaUp.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieAnnikaDown"
+when
+	Item JalousieAnnikaDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieAnnikaDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieWohnzimmerGrossDown"
+when
+	Item JalousieWohnzimmerGrossDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieWohnzimmerGrossDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieWohnzimmerGrossUp"
+when
+	Item JalousieWohnzimmerGrossUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieWohnzimmerGrossUp.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieWohnzimmerTuerDown"
+when
+	Item JalousieWohnzimmerTuerDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieWohnzimmerTuerDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieWohnzimmerTuerUp"
+when
+	Item JalousieWohnzimmerTuerUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieWohnzimmerTuerUp.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieWohnzimmerKleinDown"
+when
+	Item JalousieWohnzimmerKleinDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieWohnzimmerKleinDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieWohnzimmerKleinUp"
+when
+	Item JalousieWohnzimmerKleinUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieWohnzimmerKleinUp.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieBueroUp"
+when
+	Item JalousieBueroUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieBueroUp.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieBueroDown"
+when
+	Item JalousieBueroDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieBueroDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieKuecheDown"
+when
+	Item JalousieKuecheDown received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieKuecheDown.sendCommand(OFF)
+	]
+end
+
+rule "Pushbutton_JalousieKuecheUp"
+when
+	Item JalousieKuecheUp received command ON
+then
+	createTimer(now.plusSeconds(time)) [|
+		JalousieKuecheUp.sendCommand(OFF)
+	]
+end

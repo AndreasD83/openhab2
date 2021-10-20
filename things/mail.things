@@ -1,0 +1,6 @@
+Thing mail:smtp:gmx [ hostname="smtp.gmx.net", sender="craziandi@gmx.de", security="SSL", username="craziandi@gmx.de", password="LT3cEsLixqoF" ]
+Thing mail:imap:gmx [ hostname="imap.gmx.net", security="SSL", username="craziandi@gmx.de", password="LT3cEsLixqoF" ] {
+    Channels:
+        Type mailcount : inbox_total [ folder="INBOX", type="TOTAL" ]
+        Type mailcount : inbox_unread [ folder="INBOX", type="UNREAD" ]
+}

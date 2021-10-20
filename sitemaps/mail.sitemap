@@ -1,0 +1,7 @@
+sitemap demo label="craziandi@gmx.de"
+{
+    Frame {
+        Text item=InboxTotal
+        Text item=InboxUnread
+    }
+}

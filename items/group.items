@@ -19,3 +19,5 @@ Switch TasterWohnzimmer "TasterWohnzimmer" <screen> (ALL) {expire="1s,command=OF
 Switch TasterUnten "TasterUnten" <lawnmower> (ALL) {expire="1s,command=OFF"}
 Switch AllOn "TasterAllesAn" <screen> (ALL) {expire="1s,command=OFF"}
 Switch AllOff "TasterAllesAus" <screen> (ALL) {expire="1s,command=OFF"}
+
+Switch DeactivateRules "RegelnDeaktivieren" <presence> (ALL)

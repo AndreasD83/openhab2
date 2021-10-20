@@ -71,6 +71,7 @@ sitemap default label="Steuerung"
 				Frame label="Gesamt" {
 					Switch item=ObenUp label="Hoch"
 					Switch item=ObenDown label="Runter"
+					Switch item=DeactivateRules label="Deaktivieren Der Rules"
 			    }
 		}
 		Text label="Dachboden" icon="attic" {
