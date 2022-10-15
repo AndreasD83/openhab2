@@ -4,99 +4,99 @@ Bridge modbus:tcp:wago [ host="192.168.2.14", port=502, id=1 ] {
 		
 		//lights
 		//0.0
-		Thing data LichtFlurEG [ readStart="12288", readValueType="bit", writeStart="12288", writeValueType="bit", writeType="coil" ]
+		Thing data LichtFlurEG "LichtFlurEG" [ readStart="12288", readValueType="bit", writeStart="12288", writeValueType="bit", writeType="coil" ]
 		//0.1
-		Thing data LichtWohnzimmerSofaecke [ readStart="12289", readValueType="bit", writeStart="12289", writeValueType="bit", writeType="coil" ]
+		Thing data LichtWohnzimmerSofaecke "LichtWohnzimmerSofaecke" [ readStart="12289", readValueType="bit", writeStart="12289", writeValueType="bit", writeType="coil" ]
 		//0.2
-		Thing data LichtKueche [ readStart="12290", readValueType="bit", writeStart="12290", writeValueType="bit", writeType="coil" ]
+		Thing data LichtKueche "LichtKueche" [ readStart="12290", readValueType="bit", writeStart="12290", writeValueType="bit", writeType="coil" ]
 		//0.3
-		Thing data LichtWohnzimmerMitte [ readStart="12291", readValueType="bit", writeStart="12291", writeValueType="bit", writeType="coil" ]
+		Thing data LichtWohnzimmerMitte "LichtWohnzimmerMitte" [ readStart="12291", readValueType="bit", writeStart="12291", writeValueType="bit", writeType="coil" ]
 		//0.4
-		Thing data LichtBuero [ readStart="12292", readValueType="bit", writeStart="12292", writeValueType="bit", writeType="coil" ]
+		Thing data LichtBuero "LichtBuero" [ readStart="12292", readValueType="bit", writeStart="12292", writeValueType="bit", writeType="coil" ]
 		//0.5
-		Thing data LichtSchlafzimmer [ readStart="12293", readValueType="bit", writeStart="12293", writeValueType="bit", writeType="coil" ]
+		Thing data LichtSchlafzimmer "LichtSchlafzimmer" [ readStart="12293", readValueType="bit", writeStart="12293", writeValueType="bit", writeType="coil" ]
 		//0.6
-		Thing data LichtAnnika [ readStart="12294", readValueType="bit", writeStart="12294", writeValueType="bit", writeType="coil" ]
+		Thing data LichtAnnika "LichtAnnika" [ readStart="12294", readValueType="bit", writeStart="12294", writeValueType="bit", writeType="coil" ]
 		//0.7
-		Thing data LichtFlurOG [ readStart="12295", readValueType="bit", writeStart="12295", writeValueType="bit", writeType="coil" ]
+		Thing data LichtFlurOG "LichtFlurOG" [ readStart="12295", readValueType="bit", writeStart="12295", writeValueType="bit", writeType="coil" ]
 
 		//push buttons
 		//0.8
-		Thing data TasterBuero [ readStart="12296", readValueType="bit", writeStart="12296", writeValueType="bit", writeType="coil" ]
+		Thing data TasterBuero "TasterBuero" [ readStart="12296", readValueType="bit", writeStart="12296", writeValueType="bit", writeType="coil" ]
 		//0.9
-		Thing data TasterFlurEG [ readStart="12297", readValueType="bit", writeStart="12297", writeValueType="bit", writeType="coil" ]
+		Thing data TasterFlurEG "TasterFlurEG" [ readStart="12297", readValueType="bit", writeStart="12297", writeValueType="bit", writeType="coil" ]
 		//0.10
-		Thing data TasterWohnzimmerSofaecke [ readStart="12298", readValueType="bit", writeStart="12298", writeValueType="bit", writeType="coil" ]
+		Thing data TasterWohnzimmerSofaecke "TasterWohnzimmerSofaecke" [ readStart="12298", readValueType="bit", writeStart="12298", writeValueType="bit", writeType="coil" ]
 		//0.11
-		Thing data TasterKueche [ readStart="12299", readValueType="bit", writeStart="12299", writeValueType="bit", writeType="coil" ]
+		Thing data TasterKueche "TasterKueche" [ readStart="12299", readValueType="bit", writeStart="12299", writeValueType="bit", writeType="coil" ]
 		//0.12
-		Thing data TasterWohnzimmerMitte [ readStart="12300", readValueType="bit", writeStart="12300", writeValueType="bit", writeType="coil" ]
+		Thing data TasterWohnzimmerMitte "TasterWohnzimmerMitte" [ readStart="12300", readValueType="bit", writeStart="12300", writeValueType="bit", writeType="coil" ]
 		//0.13
-		Thing data TasterSchlafzimmer [ readStart="12301", readValueType="bit", writeStart="12301", writeValueType="bit", writeType="coil" ]
+		Thing data TasterSchlafzimmer "TasterSchlafzimmer" [ readStart="12301", readValueType="bit", writeStart="12301", writeValueType="bit", writeType="coil" ]
 		//0.14
-		Thing data TasterAnnika [ readStart="12302", readValueType="bit", writeStart="12302", writeValueType="bit", writeType="coil" ]
+		Thing data TasterAnnika "TasterAnnika" [ readStart="12302", readValueType="bit", writeStart="12302", writeValueType="bit", writeType="coil" ]
 		//0.15
-		Thing data TasterFlurOG [ readStart="12303", readValueType="bit", writeStart="12303", writeValueType="bit", writeType="coil" ]
+		Thing data TasterFlurOG "TasterFlurOG" [ readStart="12303", readValueType="bit", writeStart="12303", writeValueType="bit", writeType="coil" ]
 
 		//rolershutter
 		//1.0
-		Thing data JalousieElternDown [ readStart="12304", readValueType="bit", writeStart="12304", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieElternDown "JalousieElternDown" [ readStart="12304", readValueType="bit", writeStart="12304", writeValueType="bit", writeType="coil" ]
 		//1.1
-		Thing data JalousieElternUp [ readStart="12305", readValueType="bit", writeStart="12305", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieElternUp "JalousieElternUp" [ readStart="12305", readValueType="bit", writeStart="12305", writeValueType="bit", writeType="coil" ]
 
 		//1.2
-		Thing data JalousieAnnikaDown [ readStart="12306", readValueType="bit", writeStart="12306", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieAnnikaDown "JalousieAnnikaDown" [ readStart="12306", readValueType="bit", writeStart="12306", writeValueType="bit", writeType="coil" ]
 		//1.3
-		Thing data JalousieAnnikaUp [ readStart="12307", readValueType="bit", writeStart="12307", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieAnnikaUp "JalousieAnnikaUp" [ readStart="12307", readValueType="bit", writeStart="12307", writeValueType="bit", writeType="coil" ]
 
 		//1.4
-		Thing data JalousieWohnzimmerGrossDown [ readStart="12308", readValueType="bit", writeStart="12308", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieWohnzimmerGrossDown "JalousieWohnzimmerGrossDown" [ readStart="12308", readValueType="bit", writeStart="12308", writeValueType="bit", writeType="coil" ]
 		//1.5
-		Thing data JalousieWohnzimmerGrossUp [ readStart="12309", readValueType="bit", writeStart="12309", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieWohnzimmerGrossUp "JalousieWohnzimmerGrossUp" [ readStart="12309", readValueType="bit", writeStart="12309", writeValueType="bit", writeType="coil" ]
 
 		//1.6
-		Thing data JalousieWohnzimmerTuerDown [ readStart="12310", readValueType="bit", writeStart="12310", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieWohnzimmerTuerDown "JalousieWohnzimmerTuerDown" [ readStart="12310", readValueType="bit", writeStart="12310", writeValueType="bit", writeType="coil" ]
 		//1.7
-		Thing data JalousieWohnzimmerTuerUp [ readStart="12311", readValueType="bit", writeStart="12311", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieWohnzimmerTuerUp "JalousieWohnzimmerTuerUp" [ readStart="12311", readValueType="bit", writeStart="12311", writeValueType="bit", writeType="coil" ]
 
 		//1.8
-		Thing data JalousieWohnzimmerKleinDown [ readStart="12312", readValueType="bit", writeStart="12312", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieWohnzimmerKleinDown "JalousieWohnzimmerKleinDown" [ readStart="12312", readValueType="bit", writeStart="12312", writeValueType="bit", writeType="coil" ]
 		//1.9
-		Thing data JalousieWohnzimmerKleinUp [ readStart="12313", readValueType="bit", writeStart="12313", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieWohnzimmerKleinUp "JalousieWohnzimmerKleinUp" [ readStart="12313", readValueType="bit", writeStart="12313", writeValueType="bit", writeType="coil" ]
 
 		//1.10
-		Thing data JalousieBueroUp [ readStart="12314", readValueType="bit", writeStart="12314", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieBueroUp "JalousieBueroUp" [ readStart="12314", readValueType="bit", writeStart="12314", writeValueType="bit", writeType="coil" ]
 		//1.11
-		Thing data JalousieBueroDown [ readStart="12315", readValueType="bit", writeStart="12315", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieBueroDown "JalousieBueroDown" [ readStart="12315", readValueType="bit", writeStart="12315", writeValueType="bit", writeType="coil" ]
 
 		//1.12
-		Thing data JalousieKuecheDown [ readStart="12316", readValueType="bit", writeStart="12316", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieKuecheDown "JalousieKuecheDown" [ readStart="12316", readValueType="bit", writeStart="12316", writeValueType="bit", writeType="coil" ]
 		//1.13
-		Thing data JalousieKuecheUp [ readStart="12317", readValueType="bit", writeStart="12317", writeValueType="bit", writeType="coil" ]
+		Thing data JalousieKuecheUp "JalousieKuecheUp"[ readStart="12317", readValueType="bit", writeStart="12317", writeValueType="bit", writeType="coil" ]
 		
 		//1.14
-		Thing data TasterLichtDachboden [ readStart="12318", readValueType="bit", writeStart="12318", writeValueType="bit", writeType="coil" ]
+		Thing data TasterLichtDachboden "TasterLichtDachboden" [ readStart="12318", readValueType="bit", writeStart="12318", writeValueType="bit", writeType="coil" ]
 		//1.15
-		Thing data LichtDachbodenVorne [ readStart="12319", readValueType="bit", writeStart="12319", writeValueType="bit", writeType="coil" ]
+		Thing data LichtDachbodenVorne "LichtDachbodenVorne" [ readStart="12319", readValueType="bit", writeStart="12319", writeValueType="bit", writeType="coil" ]
 		//2.0
-		Thing data LichtDachbodenHinten [ readStart="12320", readValueType="bit", writeStart="12320", writeValueType="bit", writeType="coil" ]
+		Thing data LichtDachbodenHinten "LichtDachbodenHinten" [ readStart="12320", readValueType="bit", writeStart="12320", writeValueType="bit", writeType="coil" ]
 		
 		//2.1
-		Thing data TasterSteckdose1 [ readStart="12321", readValueType="bit", writeStart="12321", writeValueType="bit", writeType="coil" ]
+		Thing data TasterSteckdose1 "TasterSteckdose1" [ readStart="12321", readValueType="bit", writeStart="12321", writeValueType="bit", writeType="coil" ]
 		//2.2
-		Thing data TasterSteckdose2 [ readStart="12322", readValueType="bit", writeStart="12322", writeValueType="bit", writeType="coil" ]
+		Thing data TasterSteckdose2 "TasterSteckdose2" [ readStart="12322", readValueType="bit", writeStart="12322", writeValueType="bit", writeType="coil" ]
 		
 		//2.3
-		Thing data LichtSteckdose1 [ readStart="12323", readValueType="bit", writeStart="12323", writeValueType="bit", writeType="coil" ]
+		Thing data LichtSteckdose1 "LichtSteckdose1" [ readStart="12323", readValueType="bit", writeStart="12323", writeValueType="bit", writeType="coil" ]
 		//2.4
-		Thing data LichtSteckdose2 [ readStart="12324", readValueType="bit", writeStart="12324", writeValueType="bit", writeType="coil" ]
+		Thing data LichtSteckdose2 "LichtSteckdose2" [ readStart="12324", readValueType="bit", writeStart="12324", writeValueType="bit", writeType="coil" ]
 		
 		//2.5
-		Thing data TasterDraussen [ readStart="12325", readValueType="bit", writeStart="12325", writeValueType="bit", writeType="coil" ]
+		Thing data TasterDraussen "TasterDraussen" [ readStart="12325", readValueType="bit", writeStart="12325", writeValueType="bit", writeType="coil" ]
 		//2.6
-		Thing data LichtDraussen1 [ readStart="12326", readValueType="bit", writeStart="12326", writeValueType="bit", writeType="coil" ]
+		Thing data LichtDraussen1 "LichtDraussen1" [ readStart="12326", readValueType="bit", writeStart="12326", writeValueType="bit", writeType="coil" ]
 		//2.7
-		Thing data LichtDraussen2 [ readStart="12327", readValueType="bit", writeStart="12327", writeValueType="bit", writeType="coil" ]
+		Thing data LichtDraussen2 "LichtDraussen2" [ readStart="12327", readValueType="bit", writeStart="12327", writeValueType="bit", writeType="coil" ]
 
     }
 }
