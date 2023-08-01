@@ -1,0 +1,66 @@
+val no = "+4917620453560"
+val thing = "signal:signallinkedbridge:97561d96b9"
+
+rule "LichtKueche ON"
+when
+   Item LichtKueche changed from OFF to ON
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtKueche an!")
+end
+
+rule "LichtKueche OFF"
+when
+   Item LichtKueche changed from ON to OFF
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtKueche aus!")
+end
+
+rule "LichtFlurEG ON"
+when
+   Item LichtFlurEG changed from OFF to ON
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtFlurEG an!")
+end
+
+rule "LichtFlurEG OFF"
+when
+   Item LichtFlurEG changed from ON to OFF
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtFlurEG aus!")
+end
+
+rule "LichtFlurOG ON"
+when
+   Item LichtFlurOG changed from OFF to ON
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtFlurOG an!")
+end
+
+rule "LichtFlurOG OFF"
+when
+   Item LichtFlurOG changed from ON to OFF
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtFlurOG aus!")
+end
+
+rule "LichtDachbodenVorne ON"
+when
+   Item LichtDachbodenVorne changed from OFF to ON
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtDachbodenVorne an!")
+end
+
+rule "LichtDachbodenVorne OFF"
+when
+   Item LichtDachbodenVorne changed from ON to OFF
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtDachbodenVorne aus!")
+end
