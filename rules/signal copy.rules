@@ -1,0 +1,33 @@
+val no = "+4917620453560"
+val thing = "signal:signallinkedbridge:97561d96b9"
+rule "LichtWohnzimmerSofaecke ON"
+when
+   Item LichtWohnzimmerSofaecke changed from OFF to ON
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtWohnzimmerSofaecke an!")
+end
+
+rule "LichtWohnzimmerSofaecke OFF"
+when
+   Item LichtWohnzimmerSofaecke changed from ON to OFF
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtWohnzimmerSofaecke aus!")
+end
+
+rule "LichtSteckdose1 ON"
+when
+   Item LichtSteckdose1 changed from OFF to ON
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtSteckdose1 an!")
+end
+
+rule "LichtSteckdose1 OFF"
+when
+   Item LichtSteckdose1 changed from ON to OFF
+then
+   val signalAction = getActions("signal",thing)
+   signalAction.sendSignal(no, "LichtSteckdose1 aus!")
+end
