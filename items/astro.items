@@ -1,4 +1,11 @@
-DateTime SunriseDate  "Date [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="astro:sun:home:rise#start" }
-DateTime SunriseTime  "Time [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="astro:sun:home:rise#start" }
-DateTime Date  "Date [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="ntp:ntp:local:dateTime" }
-DateTime Time  "Time [%1$tA, %1$tB  %1$td, %1$tY]"  { channel="ntp:ntp:local:dateTime" }
+DateTime         Sunrise_Time       "Sunrise [%1$tH:%1$tM]"                   { channel="astro:sun:house:rise#start" }
+DateTime         Sunset_Time        "Sunset [%1$tH:%1$tM]"                    { channel="astro:sun:house:set#start" }
+Number:Angle     Azimuth            "Azimuth"                                 { channel="astro:sun:house:position#azimuth" }
+Number:Angle     Elevation          "Elevation"                               { channel="astro:sun:house:position#elevation" }
+String           MoonPhase          "MoonPhase"                               { channel="astro:moon:house:phase#name" }
+Number:Length    MoonDistance       "MoonDistance [%.1f %unit%]"              { channel="astro:moon:house:distance#distance" }
+Number:Intensity Total_Radiation    "Radiation [%.2f %unit%]"                 { channel="astro:sun:house:radiation#total" }
+Number:Intensity Diffuse_Radiation  "Diffuse Radiation [%.2f %unit%]"         { channel="astro:sun:house:radiation#diffuse" }
+DateTime    Moon_Next_Full       "Next Full Moon [%1$td.%1$tm.%1$tY, %1$tH:%1$tM]" <moon>   (Astro) {channel="astro:moon:house:phase#full"}
+DateTime    Moon_Next_New        "Next New Moon [%1$td.%1$tm.%1$tY, %1$tH:%1$tM]"  <moon>   (Astro) {channel="astro:moon:house:phase#new"}
+String          Day_Phase            "Phase of Day [MAP(astro.map):%s]"                         (Astro) {channel="astro:sun:house:phase#name"}

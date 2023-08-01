@@ -5,13 +5,18 @@ sitemap default label="Steuerung"
 			  Frame label="Flur Erdgeschoss" {
 				Switch item=LichtFlurEG label="Licht" mappings=[ON=" "] 
 				Switch item=TasterFlurEG label="Taster" 
-			  }   
+			}
+			   
 			  Frame label="Kueche" {
 				Switch item=LichtKueche label="Licht" mappings=[ON=" "] 
 				Switch item=TasterKueche  label="Taster" 
 				Switch item=JalousieKuecheUp label="Hoch"
 				Switch item=JalousieKuecheDown label="Runter"
 			  }
+			  Frame label="Gesamt" {
+				Switch item=UntenUp label="Hoch"
+				Switch item=UntenDown label="Runter"
+			  }  
 			}
 			Text label="Wohnzimmer" icon="sofa" {
 				Switch item=LichtWohnzimmerMitte label="Licht" mappings=[ON=" "] 
@@ -63,6 +68,11 @@ sitemap default label="Steuerung"
 					//Switch item=JalousieAnnikaDown label="Runter" mappings=[ON="Runter"] icon="soundvolume" visibility=[JalousieAnnikaDown!=ON]
 					//Switch item=JalousieAnnikaDown label="Hoch" mappings=[OFF="Hoch"] icon="soundvolume" visibility=[JalousieAnnikaDown==ON]
 				}
+				Frame label="Gesamt" {
+					Switch item=ObenUp label="Hoch"
+					Switch item=ObenDown label="Runter"
+					Switch item=DeactivateRules label="Deaktivieren Der Rules"
+			    }
 		}
 		Text label="Dachboden" icon="attic" {
 				   Frame label="Licht" {

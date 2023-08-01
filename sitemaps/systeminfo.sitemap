@@ -1,0 +1,67 @@
+sitemap default label="Systeminformationen"
+{
+    Frame label="Network Information" {
+        Default item=Network_AdapterName
+        Default item=Network_Name
+        Default item=Network_IP
+        Default item=Network_Mac
+        Default item=Network_DataSent
+        Default item=Network_DataReceived
+        Default item=Network_PacketsSent
+        Default item=Network_PacketsReceived
+    }
+    Frame label="CPU Information" {
+        Default item=CPU_Name
+        Default item=CPU_Description
+        Default item=CPU_Load1
+        Default item=CPU_Load5
+        Default item=CPU_Load15
+        Default item=CPU_Threads
+        Default item=CPU_Uptime
+    }
+    Frame label="Drive Information" {
+        Default item=Drive_Name
+        Default item=Drive_Model
+        Default item=Drive_Serial
+    }
+    Frame label="Storage Information" {
+        Default item=Storage_Name
+        Default item=Storage_Type
+        Default item=Storage_Description
+        Default item=Storage_Available
+        Default item=Storage_Used
+        Default item=Storage_Total
+        Default item=Storage_Available_Percent
+        Default item=Storage_Used_Percent
+    }
+    Frame label="Memory Information" {
+        Default item=Memory_Available
+        Default item=Memory_Used
+        Default item=Memory_Total
+        Default item=Memory_Available_Percent
+        Default item=Memory_Used_Percent
+    }
+    Frame label="Swap Memory Information" {
+        Default item=Swap_Available
+        Default item=Swap_Used
+        Default item=Swap_Total
+        Default item=Swap_Available_Percent
+        Default item=Swap_Used_Percent
+    }
+    Frame label="Battery, Display and Sensor Information" {
+        Default item=Battery_Name
+        Default item=Battery_RemainingCapacity
+        Default item=Battery_RemainingTime
+        Default item=Display_Description
+        Default item=Sensor_CPUTemp
+        Default item=Sensor_CPUVoltage
+        Default item=Sensor_FanSpeed
+    }
+    Frame label="Process Information" {
+        Default item=Process_load
+        Default item=Process_used
+        Default item=Process_name
+        Default item=Process_threads
+        Default item=Process_path
+    }
+}

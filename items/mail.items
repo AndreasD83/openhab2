@@ -1,0 +1,2 @@
+Number InboxTotal  "INBOX [%d]"        { channel="mail:imap:gmx:inbox_total" }
+Number InboxUnread "INBOX Unread [%d]" { channel="mail:imap:gmx:inbox_unread" }

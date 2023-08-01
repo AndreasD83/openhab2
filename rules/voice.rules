@@ -6,71 +6,80 @@ then
   val txt = VoiceCommand.state.toString.toLowerCase
   logInfo("Voice.Rec","VoiceCommand Gesamt received '"+txt+"'")
   logInfo("Voice.Rec","rule start...")
-  if(txt.contains("unten runter")){
-	sendCommand(UntenDown, ON)
+  if(txt.toLowerCase().contains("unten runter")){
+	  sendCommand(UntenDown, ON)
   }
-  else if (txt.contains("unten hoch")) {
+  else if (txt.toLowerCase().contains("unten hoch")) {
     sendCommand(UntenUp, ON)
   }
   
-  else if (txt.contains("oben hoch")) {
+  else if (txt.toLowerCase().contains("oben hoch")) {
     sendCommand(ObenUp, ON)
   }
-  else if (txt.contains("oben runter")) {
+  else if (txt.toLowerCase().contains("oben runter")) {
     sendCommand(ObenDown, ON)
   }
-  else if (txt.contains("kochen an")) {
+  else if (txt.toLowerCase().contains("kochen an")) {
     sendCommand(LichtKueche, ON)
   }
-  else if (txt.contains("kochen aus")) {
+  else if (txt.toLowerCase().contains("kochen aus")) {
     sendCommand(LichtKueche, OFF)
   }
   
   
-  else if (txt.contains("nele hoch")) {
+  else if (txt.toLowerCase().contains("nele hoch")) {
     sendCommand(JalousieBueroUp, ON)
   }
-  else if (txt.contains("nele runter")) {
+  else if (txt.toLowerCase().contains("nele runter")) {
     sendCommand(JalousieBueroDown, ON)
   }
-  else if (txt.contains("nele an")) {
+  else if (txt.toLowerCase().contains("nele an")) {
     sendCommand(TasterBuero, ON)
   }
-  else if (txt.contains("nele aus")) {
+  else if (txt.toLowerCase().contains("nele aus")) {
     sendCommand(TasterBuero, OFF)
   }
   
-  else if (txt.contains("schlafzimmer hoch")) {
+  else if (txt.toLowerCase().contains("eltern hoch")) {
     sendCommand(JalousieElternUp, ON)
   }
-  else if (txt.contains("schlafzimmer runter")) {
+  else if (txt.toLowerCase().contains("eltern runter")) {
     sendCommand(JalousieElternDown, ON)
   }
-  else if (txt.contains("schlafzimmer an")) {
+  else if (txt.toLowerCase().contains("eltern an")) {
     sendCommand(TasterSchlafzimmer, ON)
   }
-  else if (txt.contains("schlafzimmer aus")) {
+  else if (txt.toLowerCase().contains("eltern aus")) {
     sendCommand(TasterSchlafzimmer, OFF)
   }
   
-  else if (txt.contains("annika hoch")) {
+  else if (txt.toLowerCase().contains("annika hoch")) {
     sendCommand(JalousieAnnikaUp, ON)
   }
-  else if (txt.contains("annika runter")) {
+  else if (txt.toLowerCase().contains("annika runter")) {
     sendCommand(JalousieAnnikaDown, ON)
   }
-  else if (txt.contains("annika an")) {
+  else if (txt.toLowerCase().contains("annika an")) {
     sendCommand(TasterAnnika, ON)
   }
-  else if (txt.contains("annika aus")) {
+  else if (txt.toLowerCase().contains("annika aus")) {
     sendCommand(TasterAnnika, OFF)
   }
   
-  else if (txt.contains("wohnzimmer hoch")) {
+  else if (txt.toLowerCase().contains("wohnzimmer hoch")) {
+    logInfo("Voice.Rec","wohnzimmer hoch...")
     sendCommand(WohnzimmerUp, ON)
   }
-  else if (txt.contains("wohnzimmer runter")) {
+  else if (txt.toLowerCase().contains("wohnzimmer runter")) {
+    logInfo("Voice.Rec","wohnzimmer runter...")
     sendCommand(WohnzimmerDown, ON)
+  }
+  else if (txt.toLowerCase().contains("dachboden an")) {
+    logInfo("Voice.Rec","Dachboden an...")
+    sendCommand(TasterLichtDachboden, ON)
+  }
+  else if (txt.toLowerCase().contains("dachboden aus")) {
+    sendCommand(TasterLichtDachboden, OFF)
   }
   
   

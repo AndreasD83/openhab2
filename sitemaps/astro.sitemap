@@ -1,0 +1,12 @@
+sitemap default label="Astro"
+{
+    Frame label="Sonne"{
+		Text item=Sunrise_Time icon="sunrise"
+        Text item=Sunset_Time icon="sunset"
+	}
+	Frame label="Mond"{
+		Text item=MoonPhase label="Phase" icon="moon"
+        Text item=Moon_Next_Full label="Nächster Vollmond" icon="moon"
+		Text item=Moon_Next_New label="Nächster Neumond" icon="moon"
+	}
+}

@@ -1,0 +1,6 @@
+Bridge openweathermap:weather-api:api "OpenWeatherMap Account" [apikey="2ae369c890f989f7c60016159de0acfe", refreshInterval=30, language="de"] {
+    Thing weather-and-forecast local "Local Weather And Forecast" [location="51.9694133,7.5744154", forecastHours=0, forecastDays=7]
+    Thing weather-and-forecast telgte "Weather And Forecast In Miami" [location="51.9694133,7.5744154", forecastHours=24, forecastDays=0]
+    Thing onecall local "Local Weather and Forecast" [location="51.9694133,7.5744154"]
+}
+

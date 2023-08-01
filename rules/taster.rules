@@ -1,6 +1,6 @@
 rule "Wohnzimmer runter"
 when
-    Item WohnzimmerDown changed from OFF to ON
+    Item WohnzimmerDown changed 
 then
 	sendCommand(JalousieWohnzimmerGrossDown, ON)
 	sendCommand(JalousieWohnzimmerKleinDown, ON)
@@ -9,55 +9,83 @@ end
 
 rule "Wohnzimmer hoch"
 when
-    Item WohnzimmerUp changed from OFF to ON
+    Item WohnzimmerUp changed 
 then
+	logInfo("","WohnzimmerUp an...")
 	sendCommand(JalousieWohnzimmerGrossUp, ON)
 	sendCommand(JalousieWohnzimmerKleinUp, ON)
 	sendCommand(JalousieWohnzimmerTuerUp, ON)
-	
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerGrossUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerKleinUp, OFF) ]
-	createTimer(now.plusSeconds(2)) [| sendCommand(JalousieWohnzimmerTuerUp, OFF) ]
 end
 
 rule "Unten runter"
 when
-    Item UntenDown changed from OFF to ON
+    Item UntenDown changed 
 then
 	sendCommand(WohnzimmerDown, ON)
 	sendCommand(JalousieKuecheDown, ON)
+	val mailActions = getActions("mail","mail:smtp:gmx")
+    val success = mailActions.sendMail("dieckmann.andreas@gmail.com", "Unten runter", "Alle Jalousien unten wurden herunter gefahren!")
+
 end
 
 rule "Unten hoch"
 when
-    Item UntenUp changed from OFF to ON
+    Item UntenUp changed 
 then
 	sendCommand(WohnzimmerUp, ON)
 	sendCommand(JalousieKuecheUp, ON)
+	val mailActions = getActions("mail","mail:smtp:gmx")
+    val success = mailActions.sendMail("dieckmann.andreas@gmail.com", "Unten hoch", "Alle Jalousien unten wurden hochgefahren!")
+
 end
 
 
 rule "Oben runter"
 when
-    Item ObenDown changed from OFF to ON
+    Item ObenDown changed 
 then
-	sendCommand(JalousieElternDown, ON)
-	sendCommand(JalousieAnnikaDown, ON)
-	sendCommand(JalousieBueroDown, ON)
+    var message = "KEINE Jalousien oben wurden heruntergefahren!"
+	var subject = "Oben NICHT runter"
+    if((DeactivateRules.state==OFF)){
+		//sendCommand(JalousieElternDown, ON)
+		sendCommand(JalousieAnnikaDown, ON)
+		sendCommand(JalousieBueroDown, ON)
+		message = "Alle Jalousien oben wurden heruntergefahren!"
+		subject = "Oben runter"
+	} 
+	val mailActions = getActions("mail","mail:smtp:gmx")
+    val success = mailActions.sendMail("dieckmann.andreas@gmail.com", subject, message)
+	logInfo("",success)
 end
 
 rule "Oben hoch"
 when
-    Item ObenUp changed from OFF to ON
+    Item ObenUp changed 
 then
-	sendCommand(JalousieElternUp, ON)
+	//sendCommand(JalousieElternUp, ON)
 	sendCommand(JalousieAnnikaUp, ON)
 	sendCommand(JalousieBueroUp, ON)
 end
 
+rule "Alles hoch"
+when
+    Item AllUp changed 
+then
+	sendCommand(ObenUp, ON)
+	sendCommand(UntenUp, ON)
+end
+
+rule "Alles runter"
+when
+    Item AllDown changed 
+then
+	sendCommand(ObenDown, ON)
+	sendCommand(UntenDown, ON)
+end
+
 rule "oben Licht an"
 when 
-	Item TasterObenOn changed from OFF to ON
+	Item TasterObenOn changed 
 then
 		if (LichtBuero.state == OFF) {
 			sendCommand(LichtBuero, ON)
@@ -83,7 +111,7 @@ end
 
 rule "oben Licht aus"
 when 
-	Item TasterObenOff changed from OFF to ON
+	Item TasterObenOff changed 
 then
 		if (LichtBuero.state == ON) {
 			if (TasterBuero.state == OFF) {
@@ -117,7 +145,7 @@ end
 
 rule "Wohnzimmer"
 when 
-	Item TasterWohnzimmer changed from OFF to ON
+	Item TasterWohnzimmer changed 
 then
 		if (TasterWohnzimmerSofaecke.state == OFF) {
 			sendCommand(TasterWohnzimmerSofaecke, ON)
@@ -133,7 +161,7 @@ end
 
 rule "unten List"
 when 
-	Item TasterUnten changed from OFF to ON
+	Item TasterUnten changed 
 then
 		sendCommand(TasterWohnzimmer, ON)
 		
@@ -149,4 +177,3 @@ then
 			sendCommand(TasterKueche, OFF)
 		}
 end
-

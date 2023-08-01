@@ -9,6 +9,8 @@ sitemap default label="Fernseher"
 				Switch item=TV_KeyCode label="Mute" icon="soundvolume_mute" mappings=[KEY_MUTE="ON"] visibility=[tv_mute==OFF]
 				Switch item=TV_KeyCode label="Mute" icon="soundvolume_mute" mappings=[KEY_MUTE="OFF"] visibility=[tv_mute==ON]
 				Switch item=TV_KeyCode label="Ch" icon="settings" mappings=[KEY_CHDOWN="-",KEY_CHUP="+"]
-				Switch item=TV_KeyCode label="Power" mappings=[KEY_POWEROFF="OFF"]
+				Switch item=TV_KeyCode label="On" mappings=[KEY_POWERON="ON"]
+				Switch item=TV_KeyCode label="Off" mappings=[KEY_POWEROFF="OFF"]
+				
     }
 }
