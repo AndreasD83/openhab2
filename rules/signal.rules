@@ -1,4 +1,4 @@
-val no = "+4917620453560"
+val no = "+"
 val thing = "signal:signallinkedbridge:97561d96b9"
 
 rule "LichtKueche ON"
