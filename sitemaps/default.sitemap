@@ -51,13 +51,13 @@ sitemap default label="Steuerung"
 					Switch item=JalousieElternUp label="Hoch"
 					Switch item=JalousieElternDown label="Runter"
 				}
-				Frame label="Annikas Zimmer" {
+				Frame label="Neles Zimmer" {
 					Switch item=LichtBuero label="Licht" mappings=[ON=" "] 
 					Switch item=TasterBuero label="Taster" icon="girl_3"
 					Switch item=JalousieBueroUp label="Hoch" 
 					Switch item=JalousieBueroDown label="Runter" 
 				} 
-				Frame label="Neles Zimmer" {
+				Frame label="Tills Zimmer" {
 					Switch item=LichtAnnika label="Licht" mappings=[ON=" "] 
 					Switch item=TasterAnnika label="Taster" icon="girl_2"
 					//Switch item=JalousieAnnika label="Jalousie"
@@ -74,7 +74,7 @@ sitemap default label="Steuerung"
 					Switch item=DeactivateRules label="Deaktivieren Der Rules"
 			    }
 		}
-		Text label="Dachboden" icon="attic" {
+		Text label="Annikas Zimmer" icon="attic" {
 				   Frame label="Licht" {
 					Switch item=LichtDachbodenVorne label="Licht" mappings=[ON=" "] 
 					Switch item=LichtDachbodenHinten label="Licht" mappings=[ON=" "] 
